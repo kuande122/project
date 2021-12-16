@@ -1,6 +1,8 @@
-import streamlit as st
+
 import requests
 from bs4 import BeautifulSoup
+
+
 score = requests.get('http://www.cpbl.com.tw/stats/toplist.html')
 if score.status_code == 200:
     st.write("connection!")
