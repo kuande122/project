@@ -43,7 +43,7 @@ for k in range(1, len(score)): #處理score[1]後的成績數據
         year_score_c.update({c_title:static})
     player_score.append(year_score)
     player_score_c.append(year_score_c)
- def get_player_html(url):
+ def get_player_html(url) : 
     if url:
         player = requests.get(url)
         if player.status_code == 200:
