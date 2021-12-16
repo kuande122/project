@@ -1,8 +1,9 @@
 from bs4 import BeautifulSoup
 import requests
-import xlsxwriter
-import os
 import streamlit as st
+import pandas as pd
+import numpy as np
+import re
 
 score = requests.get('https://www.cpbl.com.tw/stats/toplist')
 if score.status_code == 200:
