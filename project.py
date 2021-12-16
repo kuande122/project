@@ -4,7 +4,7 @@ import xlsxwriter
 import os
 import streamlit as st
 
-score = requests.get('http://www.cpbl.com.tw/stats/toplist.html')
+score = requests.get('https://www.cpbl.com.tw/stats/toplist')
 if score.status_code == 200:
     st.write("connection!")
     soup = BeautifulSoup(score.text,'html.parser')
