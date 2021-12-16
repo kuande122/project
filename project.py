@@ -1,7 +1,7 @@
 
 import requests
 from bs4 import BeautifulSoup
-
+import streamlit as st
 
 score = requests.get('http://www.cpbl.com.tw/stats/toplist.html')
 if score.status_code == 200:
