@@ -5,7 +5,7 @@ import csv
 def get_all_player():
     url = "https://www.cpbl.com.tw/player"
 fieldnames = ['Name','ID','Team ID']
-    with open("player_ID.csv",'w') as csvfile:
+  with open("player_ID.csv",'w') as csvfile:
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
         writer.writeheader()
         for i in range(5):
