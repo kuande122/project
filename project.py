@@ -11,7 +11,7 @@ if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
 elif option == '統一7-Eleven獅':
-  image = Image.open('unilio.png')
+  image = Image.open('unilion.png')
   st.image(image)
 elif option == '味全龍':
   image = Image.open('Dragons.png')
