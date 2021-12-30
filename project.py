@@ -10,15 +10,15 @@ option = st.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', 
 if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
-if option == '統一7-Eleven獅':
+elif == '統一7-Eleven獅':
   image = Image.open('unilio.png')
   st.image(image)
-if option == '味全龍':
+elif option == '味全龍':
   image = Image.open('Dragons.png')
   st.image(image)
-if option == '樂天桃猿':
+elif option == '樂天桃猿':
   image = Image.open('Rakuten.png')
   st.image(image)
-if option == '富邦悍將':
+elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
