@@ -10,6 +10,7 @@ option = st.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', 
 if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
+  st.write('兄弟象(1990-2013)–中信兄弟(2014-至今)')
 elif option == '統一7-Eleven獅':
   image = Image.open('unilion.png')
   st.image(image)
