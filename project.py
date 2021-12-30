@@ -10,7 +10,7 @@ option = st.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', 
 if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
-elif == '統一7-Eleven獅':
+elif option == '統一7-Eleven獅':
   image = Image.open('unilio.png')
   st.image(image)
 elif option == '味全龍':
