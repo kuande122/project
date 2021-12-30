@@ -2,7 +2,6 @@ import csv
 import streamlit as st
 import pandas as pd
 import numpy as np
-matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_agg import RendererAgg
 from matplotlib.figure import Figure
