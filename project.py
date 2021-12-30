@@ -11,5 +11,14 @@ if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
 if option == '統一7-Eleven獅':
-  image = Image.open('brothers.png')
+  image = Image.open('unilions.png')
+  st.image(image)
+if option == '味全龍':
+  image = Image.open('Dragons.png')
+  st.image(image)
+if option == '樂天桃猿':
+  image = Image.open('Rakuten.png')
+  st.image(image)
+if option == '富邦悍將':
+  image = Image.open('guardians.png')
   st.image(image)
