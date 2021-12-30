@@ -6,7 +6,7 @@ from PIL import Image
 data = pd.read_csv('2020.csv')
 st.write("## THE DATA BEING USED")
 data
-option = st.sildbar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
+option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
