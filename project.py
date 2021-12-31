@@ -1,6 +1,5 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import pandas as pd
+
 import altair as alt
 import numpy as np
 from PIL import Image
@@ -21,7 +20,8 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
-
+import matplotlib.pyplot as plt
+import pandas as pd
 df = pd.read_excel("wang.xlsx") 
 plt.plot(年度, 打擊率, color='b')
 plt.xlabel('year') # 設定x軸標題
