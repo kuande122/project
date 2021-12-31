@@ -24,10 +24,13 @@ elif option == '富邦悍將':
 excel_file = 'wang .xlsx'
 sheet_name = 'DATA'
 
-df = pd.read_excel(excel_file,usecols='A:B',
+df = pd.read_excel(excel_file,
+                   sheet_name=sheet_name,
+                   usecols='A:B',
                    header=3)
 
-df_participants = pd.read_excel(excel_file,usecols='A:B',
+df_participants = pd.read_excel(excel_file,
+                                sheet_name=sheet_name,
+                                usecols='A:B',
                                 header=3)
 df_participants.dropna(inplace=True)
-st.write('hello')
