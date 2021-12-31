@@ -37,3 +37,4 @@ df_participants = pd.read_excel(excel_file,
                                 usecols='A:B',
                                 header=3)
 df_participants.dropna(inplace=True)
+st.write('hello')
