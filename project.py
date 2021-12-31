@@ -1,4 +1,5 @@
 import streamlit as st
+import matplotlib.pyplot as plt
 import pandas as pd
 import altair as alt
 import numpy as np
