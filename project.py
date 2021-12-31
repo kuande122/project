@@ -21,7 +21,7 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
-excel_file = 'wang.xlsx'
+excel_file = 'wang .xlsx'
 sheet_name = 'DATA'
 
 df = pd.read_excel(excel_file,usecols='A:B',
