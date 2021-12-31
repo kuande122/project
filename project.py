@@ -1,5 +1,6 @@
 import streamlit as st
-
+import plotly.express as px
+import pandas as pd
 import altair as alt
 import numpy as np
 from PIL import Image
@@ -20,11 +21,16 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
-import matplotlib.pyplot as plt
-import pandas as pd
-df = pd.read_excel("wang.xlsx") 
-plt.plot(年度, 打擊率, color='b')
-plt.xlabel('year') # 設定x軸標題
-plt.xticks(打擊率, rotation='vertical') # 設定x軸label以及垂直顯示
-plt.title('Wang') # 設定圖表標題
-plt.show()
+excel_file = 'wang.xlsx'
+sheet_name = 'DATA'
+
+df = pd.read_excel(excel_file,
+                   sheet_name=sheet_name,
+                   usecols='A:B',
+                   header=3)
+
+df_participants = pd.read_excel(excel_file,
+                                sheet_name= sheet_name,
+                                usecols='A:B',
+                                header=3)
+df_participants.dropna(inplace=True)
