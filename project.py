@@ -4,6 +4,9 @@ import pandas as pd
 import altair as alt
 import numpy as np
 from PIL import Image
+st.set_page_config(page_title='Survey Results')
+st.header('Survey Results 2021')
+st.subheader('Was the tutorial helpful?')
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 if option == '中信兄弟':
   image = Image.open('brothers.png')
