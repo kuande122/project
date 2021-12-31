@@ -9,6 +9,11 @@ if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
   st.write('兄弟象(1990-2013)–中信兄弟(2014-至今)')
+  plt.plot(中信兄弟.年度, 中信兄弟.防禦率, color='b')
+plt.xlabel('SEASON') # 設定x軸標題
+plt.xticks(中信兄弟.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+plt.title('中信兄弟防禦率') # 設定圖表標題
+plt.show()
 elif option == '統一7-Eleven獅':
   image = Image.open('unilion.png')
   st.image(image)
