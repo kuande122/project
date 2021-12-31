@@ -22,3 +22,10 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
+
+df = pd.read_excel("wang.xlsx") 
+  plt.plot(年度, 打擊率, color='b')
+  plt.xlabel('year') # 設定x軸標題
+  plt.xticks(打擊率, rotation='vertical') # 設定x軸label以及垂直顯示
+  plt.title('Wang') # 設定圖表標題
+  plt.show()
