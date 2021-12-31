@@ -1,5 +1,5 @@
 import streamlit as st
-import plotly.express as px
+import matplotlib.pyplot as plt
 import pandas as pd
 import altair as alt
 import numpy as np
@@ -21,16 +21,4 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
-excel_file = 'wang .xlsx'
-sheet_name = 'DATA'
 
-df = pd.read_excel(excel_file,
-                   sheet_name=sheet_name,
-                   usecols='A:B',
-                   header=3)
-
-df_participants = pd.read_excel(excel_file,
-                                sheet_name=sheet_name,
-                                usecols='A:B',
-                                header=3)
-df_participants.dropna(inplace=True)
