@@ -3,7 +3,6 @@ import pandas as pd
 import altair as alt
 import numpy as np
 from PIL import Image
-import plotly.express as px
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 if option == '中信兄弟':
   image = Image.open('brothers.png')
