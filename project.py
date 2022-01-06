@@ -4,6 +4,8 @@ import matplotlib.pyplot as plt   # 資料視覺化套件
 import altair as alt
 import numpy as np
 from PIL import Image
+df = pd.read_excel("wang.xlsx")
+df
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 if option == '中信兄弟':
   image = Image.open('brothers.png')
@@ -20,5 +22,4 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
-df = pd.read_excel("wang.xlsx")
-st.write(df)
+
