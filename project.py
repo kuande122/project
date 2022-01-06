@@ -47,6 +47,7 @@ if option == '中信兄弟':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    
   else:
     st.header('守備成績')
     BrothersDefense=pd.read_excel('BrothersDefense.xlsx')
