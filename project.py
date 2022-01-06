@@ -22,11 +22,7 @@ if option == '中信兄弟':
     st.header('投手成績')
     bp=pd.read_excel('bp.xlsx')
     st.write(bp)  
-    plt.plot(bp.年度, bp.防禦率, bp.xlsx, color='b',)
-    plt.xlabel('SEASON') # 設定x軸標題
-    plt.xticks(bp.年度, rotation='vertical') # 設定x軸label以及垂直顯示
-    plt.title('防禦率折線圖') # 設定圖表標題
-    plt.show()
+   
    
   elif option1=='打擊成績':
     st.header('打擊成績')
