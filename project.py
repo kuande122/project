@@ -4,6 +4,13 @@ import matplotlib.pyplot as plt   # 資料視覺化套件
 from PIL import Image
 wang = pd.read_excel('wang.xlsx')
 st.write(wang)    # 顯示前3筆資料
+ym = [None] * len(wang["年度"])     # 建立一個空列表，數量為年月的數量
+
+# 以for迴圈逐一將年月資料類別轉成字串類別
+for i in range(len(wang["年度"])):  
+    ym[i] = str(wang["年度"][i])
+    
+["年度"] = ym  # 將原本年月欄位資料替換掉
 plt.plot(wang.年度, wang.打擊率, color='b')
 plt.xlabel('SEASON') # 設定x軸標題
 plt.xticks(wang.SEASON_ID, rotation='vertical') # 設定x軸label以及垂直顯示
