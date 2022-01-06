@@ -34,7 +34,7 @@ if option == '中信兄弟':
     plt.xticks(bt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(lt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
-    plt.legend(labels=["bt", "lt"], loc = 'best')
+    plt.legend(labels=["BrothersBatting", "UnilionsBatting"], loc = 'best')
     st.pyplot(plt)
     
   else:
@@ -48,7 +48,7 @@ elif option == '統一7-Eleven獅':
   if option1=='球隊成績':
     st.header('球隊成績')
     Unilions=pd.read_excel('Unilions.xlsx')
-    st.write(l) 
+    st.write(Unilions) 
   elif option1=='投手成績':
     st.header('投手成績')
     UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
