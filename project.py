@@ -42,6 +42,11 @@ if option == '中信兄弟':
     st.header('打擊成績')
     bt=pd.read_excel('bt.xlsx')
     st.write(bt) 
+    plt.plot(bt.年度, bt.打擊率, color='b')
+    plt.xlabel('打擊率') # 設定x軸標題
+    plt.xticks(bt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.title('打擊率') # 設定圖表標題
+    st.pyplot(plt)
   else:
     st.header('守備成績')
     bc=pd.read_excel('bc.xlsx')
