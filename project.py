@@ -89,11 +89,11 @@ elif option == '統一7-Eleven獅':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(UnilionsPitching)
     st.header('數據分析')
-    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
-    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
-    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
-    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
-    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率,'.-', color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率,'.-', color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率,'.-', color='maroon')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
@@ -148,11 +148,11 @@ elif option == '味全龍':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(DragonsPitching)
     st.header('數據分析')
-    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
-    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
-    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
-    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
-    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率,'.-', color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率,'.-', color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率,'.-', color='maroon')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
@@ -206,11 +206,11 @@ elif option == '樂天桃猿':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(RakutenPitching)
     st.header('數據分析')
-    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
-    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
-    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
-    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
-    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率,'.-', color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, '.-',color='maroon')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
@@ -265,11 +265,11 @@ elif option == '富邦悍將':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(GuardiansPitching)
     st.header('數據分析')
-    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
-    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
-    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
-    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
-    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, '.-',color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率,'.-', color='maroon')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
