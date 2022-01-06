@@ -42,7 +42,37 @@ if option == '中信兄弟':
     plt.xticks(DragonsPitching.年度) 
     plt.title('CTBC Brothers Pitching ERA VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
-    st.pyplot(plt)                 
+    st.pyplot(plt) 
+    
+    
+    plt.bar(BrothersPitching.三振.unique(),
+        UnilionsPitching.三振.value_counts(), 
+        width=0.5, 
+        bottom=None, 
+        align='center', 
+        color=['lightsteelblue', 
+               'cornflowerblue', 
+               'royalblue', 
+               'midnightblue', 
+               'navy', 
+               'darkblue', 
+               'mediumblue'])
+    plt.xticks(rotation='vertical')
+    plt.title('2021 CTBC Brothers Strike Out  VS Other Teams ')
+    st.pyplot(plt) 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
   elif option1=='打擊成績':
     st.header('打擊成績')
     BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
