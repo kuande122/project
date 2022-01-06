@@ -6,8 +6,6 @@ st.set_page_config(
     page_title="猛祺的期末報告",
     page_icon='phil.ico'
     )
-
-
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
@@ -28,6 +26,9 @@ if option == '中信兄弟':
     st.header('打擊成績')
     bt=pd.read_excel('bt.xlsx')
     st.write(bt) 
+   
+
+
   else:
     st.header('守備成績')
     bc=pd.read_excel('bc.xlsx')
