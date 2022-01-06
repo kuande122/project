@@ -153,8 +153,28 @@ elif option == '統一7-Eleven獅':
  
   else:
     st.header('守備成績')
+    BrothersDefense=pd.read_excel('BrothersDefense.xlsx')
     UnilionsDefense=pd.read_excel('UnilionsDefense.xlsx')
+    DragonsDefense=pd.read_excel('DragonsDefense.xlsx')
+    RakutenDefense=pd.read_excel('RakutenDefense.xlsx')
+    GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
     st.write(UnilionsDefense) 
+    st.header('數據分析')
+    plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
+    plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
+    plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
+    plt.plot(GuardiansDefense.年度, GuardiansDefense.守備率,'.-', color='darkblue')
+    plt.plot(RakutenDefense.年度, RakutenDefense.守備率,'.-', color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+    plt.xticks(BrothersDefense.年度) # 設定x軸
+    plt.xticks(UnilionsDefense.年度) 
+    plt.xticks(RakutenDefense.年度) 
+    plt.xticks(GuardiansDefense.年度)
+    plt.xticks(DragonsDefense.年度) 
+    plt.title('Unilions Defense Fpct  VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersDefense", "UnilionsDefense","DragonsDefense","GuardiansDefense","RakutenDefense"], loc = 'best')
+    st.pyplot(plt) 
     
 elif option == '味全龍':
   image = Image.open('Dragons.png')
@@ -213,8 +233,28 @@ elif option == '味全龍':
     st.pyplot(plt)
   else:
     st.header('守備成績')
+    BrothersDefense=pd.read_excel('BrothersDefense.xlsx')
+    UnilionsDefense=pd.read_excel('UnilionsDefense.xlsx')
     DragonsDefense=pd.read_excel('DragonsDefense.xlsx')
-    st.write(DragonsDefense)  
+    RakutenDefense=pd.read_excel('RakutenDefense.xlsx')
+    GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
+    st.write(DragonsDefense) 
+    st.header('數據分析')
+    plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
+    plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
+    plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
+    plt.plot(GuardiansDefense.年度, GuardiansDefense.守備率,'.-', color='darkblue')
+    plt.plot(RakutenDefense.年度, RakutenDefense.守備率,'.-', color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+    plt.xticks(BrothersDefense.年度) # 設定x軸
+    plt.xticks(UnilionsDefense.年度) 
+    plt.xticks(RakutenDefense.年度) 
+    plt.xticks(GuardiansDefense.年度)
+    plt.xticks(DragonsDefense.年度) 
+    plt.title('Dragons Defense Fpct  VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersDefense", "UnilionsDefense","DragonsDefense","GuardiansDefense","RakutenDefense"], loc = 'best')
+    st.pyplot(plt) 
   
 elif option == '樂天桃猿':
   image = Image.open('Rakuten.png')
@@ -274,8 +314,28 @@ elif option == '樂天桃猿':
    
   else:
     st.header('守備成績')
+    BrothersDefense=pd.read_excel('BrothersDefense.xlsx')
+    UnilionsDefense=pd.read_excel('UnilionsDefense.xlsx')
+    DragonsDefense=pd.read_excel('DragonsDefense.xlsx')
     RakutenDefense=pd.read_excel('RakutenDefense.xlsx')
-    st.write(RakutenDefense)  
+    GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
+    st.write(RakutenDefense)
+    st.header('數據分析')
+    plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
+    plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
+    plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
+    plt.plot(GuardiansDefense.年度, GuardiansDefense.守備率,'.-', color='darkblue')
+    plt.plot(RakutenDefense.年度, RakutenDefense.守備率,'.-', color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+    plt.xticks(BrothersDefense.年度) # 設定x軸
+    plt.xticks(UnilionsDefense.年度) 
+    plt.xticks(RakutenDefense.年度) 
+    plt.xticks(GuardiansDefense.年度)
+    plt.xticks(DragonsDefense.年度) 
+    plt.title('Rakuten Defense Fpct  VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersDefense", "UnilionsDefense","DragonsDefense","GuardiansDefense","RakutenDefense"], loc = 'best')
+    st.pyplot(plt) 
   
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
@@ -333,7 +393,26 @@ elif option == '富邦悍將':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
   else:
-    st.header('守備成績')
+    st.header('守備成績') 
+    BrothersDefense=pd.read_excel('BrothersDefense.xlsx')
+    UnilionsDefense=pd.read_excel('UnilionsDefense.xlsx')
+    DragonsDefense=pd.read_excel('DragonsDefense.xlsx')
+    RakutenDefense=pd.read_excel('RakutenDefense.xlsx')
     GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
     st.write(GuardiansDefense)  
-
+    st.header('數據分析')
+    plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
+    plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
+    plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
+    plt.plot(GuardiansDefense.年度, GuardiansDefense.守備率,'.-', color='darkblue')
+    plt.plot(RakutenDefense.年度, RakutenDefense.守備率,'.-', color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+    plt.xticks(BrothersDefense.年度) # 設定x軸
+    plt.xticks(UnilionsDefense.年度) 
+    plt.xticks(RakutenDefense.年度) 
+    plt.xticks(GuardiansDefense.年度)
+    plt.xticks(DragonsDefense.年度) 
+    plt.title('Guardians Defense Fpct  VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersDefense", "UnilionsDefense","DragonsDefense","GuardiansDefense","RakutenDefense"], loc = 'best')
+    st.pyplot(plt) 
