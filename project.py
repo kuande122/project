@@ -29,9 +29,9 @@ if option == '中信兄弟':
     UnilionsBatting=pd.read_excel('UnilionsBatting.xlsx')
     DragonsBatting=pd.read_excel('DragonsBatting.xlsx')
     st.write(BrothersBatting) 
-    plt.plot(BrothersBatting.年度, BrothersBatting.打擊率, color='yellow')
-    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, color='darkorange')
-    plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, color='red')
+    plt.plot(BrothersBatting.年度, BrothersBatting.打擊率, color='yellow', point)
+    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, color='darkorange',point)
+    plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, color='red', point)
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(BrothersBatting.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(UnilionsBatting.年度, rotation='vertical') # 設定x軸label以及垂直顯示
