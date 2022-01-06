@@ -85,7 +85,7 @@ elif option == '樂天桃猿':
   elif option1=='打擊成績':
     st.header('打擊成績')
     rt=pd.read_excel('rt.xlsx')
-    rt.write(rt) 
+    st.write(rt) 
   else:
     st.header('守備成績')
     rc=pd.read_excel('rc.xlsx')
