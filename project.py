@@ -6,6 +6,9 @@ st.set_page_config(
     page_title="猛祺的期末報告",
     page_icon='phil.ico'
     )
+# 指定使用字型和大小
+myfont = FontProperties(fname='D:/Programs/Lib/site-packages/matplotlib/mpl-data/fonts/ttf/msjh.ttc', size=40)
+
 
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
