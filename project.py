@@ -29,7 +29,7 @@ if option == '中信兄弟':
     UnilionsBatting=pd.read_excel('UnilionsBatting.xlsx')
     st.write(BrothersBatting) 
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率, color='y')
-    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, color='b')
+    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, color='darkorange')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(BrothersBatting.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(UnilionsBatting.年度, rotation='vertical') # 設定x軸label以及垂直顯示
