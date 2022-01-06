@@ -34,7 +34,7 @@ if option == '中信兄弟':
     plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率,'.-', color='darkblue')
     plt.plot(RakutenPitching.年度, RakutenPitching.防禦率,'.-', color='maroon')
     plt.xlabel('Season') # 設定x軸標題
-    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+    
     plt.xticks(BrothersPitching.年度,rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(UnilionsPitching.年度,rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(RakutenPitching.年度,rotation='vertical') # 設定x軸label以及垂直顯示
