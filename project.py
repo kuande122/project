@@ -28,7 +28,7 @@ if option == '中信兄弟':
 elif option == '統一7-Eleven獅':
   image = Image.open('unilion.png')
   st.image(image)
-    if option1=='球隊成績':
+  if option1=='球隊成績':
     st.write('##球隊成績')
     l=pd.read_excel('l.xlsx')
     st.write(l) 
