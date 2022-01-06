@@ -194,7 +194,7 @@ elif option == '統一7-Eleven獅':
     plt.xticks(RakutenBatting.年度) 
     plt.xticks(GuardiansBatting.年度) 
     plt.xticks(DragonsBatting.年度) 
-    plt.title('CTBC Brothers Batting OBP VS Other Teams ') # 設定圖表標題
+    plt.title('Unilions Batting OBP VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
@@ -307,7 +307,7 @@ elif option == '味全龍':
     plt.xticks(RakutenBatting.年度) 
     plt.xticks(GuardiansBatting.年度) 
     plt.xticks(DragonsBatting.年度) 
-    plt.title('CTBC Brothers Batting OBP VS Other Teams ') # 設定圖表標題
+    plt.title('Dragons Batting OBP VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
@@ -419,7 +419,7 @@ elif option == '樂天桃猿':
     plt.xticks(RakutenBatting.年度) 
     plt.xticks(GuardiansBatting.年度) 
     plt.xticks(DragonsBatting.年度) 
-    plt.title('CTBC Brothers Batting OBP VS Other Teams ') # 設定圖表標題
+    plt.title('Rakuten Batting OBP VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
@@ -532,7 +532,7 @@ elif option == '富邦悍將':
     plt.xticks(RakutenBatting.年度) 
     plt.xticks(GuardiansBatting.年度) 
     plt.xticks(DragonsBatting.年度) 
-    plt.title('CTBC Brothers Batting OBP VS Other Teams ') # 設定圖表標題
+    plt.title('Guardians Batting OBP VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
