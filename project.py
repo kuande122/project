@@ -28,9 +28,22 @@ if option == '中信兄弟':
 elif option == '統一7-Eleven獅':
   image = Image.open('unilion.png')
   st.image(image)
-  st.write('投手成績')
-  lp = pd.read_excel('lp.xlsx')
-  st.write(lp)
+    if option1=='球隊成績':
+    st.write('##球隊成績')
+    l=pd.read_excel('l.xlsx')
+    st.write(l) 
+  elif option1=='投手成績':
+    st.write('##投手成績')
+    lp=pd.read_excel('lp.xlsx')
+    st.write(lp)   
+  elif option1=='打擊成績':
+    st.write('##打擊成績')
+    lt=pd.read_excel('lt.xlsx')
+    st.write(lt) 
+  else:
+    st.write('##守備成績')
+    lc=pd.read_excel('lc.xlsx')
+    st.write(lc) 
 elif option == '味全龍':
   image = Image.open('Dragons.png')
   st.image(image)
