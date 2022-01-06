@@ -21,4 +21,4 @@ elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
 df = pd.read_excel("wang.xlsx")
-print(df)
+st.write(df)
