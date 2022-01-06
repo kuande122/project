@@ -3,7 +3,9 @@ import pandas as pd               # 資料處理套件
 import matplotlib.pyplot as plt   # 資料視覺化套件
 from PIL import Image
 st.set_page_config(
-    page_title="猛祺的期末報告"
+    page_title="猛祺的期末報告",
+    page_icon='phil.ico'
+    layout="wide"
     )
 
 st.title('中華職棒數據查詢系統')
