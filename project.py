@@ -2,8 +2,8 @@ import streamlit as st
 import pandas as pd               # 資料處理套件
 import matplotlib.pyplot as plt   # 資料視覺化套件
 from PIL import Image
-wang = pd.read_csv('wang.csv')
-wang.head(3)    # 顯示前3筆資料
+wang = pd.read_excel('wang.xlsx')
+print(wang)    # 顯示前3筆資料
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 if option == '中信兄弟':
   image = Image.open('brothers.png')
