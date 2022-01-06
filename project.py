@@ -36,7 +36,7 @@ if option == '中信兄弟':
     plt.savefig("中信兄弟年度防禦率折線圖.jpg",   # 儲存圖檔
             bbox_inches='tight',               # 去除座標軸占用的空間
             pad_inches=0.0)                    # 去除所有白邊
-    plt.close()      # 關閉圖表
+   
    
   elif option1=='打擊成績':
     st.header('打擊成績')
