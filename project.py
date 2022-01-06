@@ -1,6 +1,6 @@
 import streamlit as st
-import matplotlib.pyplot as plt
-import pandas as pd
+import pandas as pd               # 資料處理套件
+import matplotlib.pyplot as plt   # 資料視覺化套件
 import altair as alt
 import numpy as np
 from PIL import Image
