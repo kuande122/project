@@ -6,9 +6,7 @@ st.set_page_config(
     page_title="猛祺的期末報告",
     page_icon="st.image(phil)",
     phil = Image.open('phil.jpg')
-    layout="centered",
-    initial_sidebar_state="collapsed",
-)
+    )
 
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
