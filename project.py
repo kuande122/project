@@ -25,8 +25,7 @@ if option == '中信兄弟':
     chart_data = pd.DataFrame(
     np.random.randn(20, 3),
     columns=['a', 'b', 'c'])
-
-st.line_chart(chart_data)
+    st.line_chart(chart_data)
    
   elif option1=='打擊成績':
     st.header('打擊成績')
