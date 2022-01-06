@@ -45,15 +45,7 @@ if option == '中信兄弟':
     st.pyplot(plt) 
     
     
-    plt.bar(BrothersPitching.奪三振.unique(),
-        width=0.5, 
-        bottom=None, 
-        align='center', 
-        color=['lightsteelblue', 
-               'cornflowerblue'])
-    plt.xticks(rotation='vertical')
-    plt.title('2021 CTBC Brothers Strike Out  VS Other Teams ')
-    st.pyplot(plt) 
+ 
     
     
     
