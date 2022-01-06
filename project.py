@@ -4,13 +4,27 @@ import matplotlib.pyplot as plt   # 資料視覺化套件
 from PIL import Image
 
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
-option = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績', '投手成績', '打擊成績', '守備成績'])
+option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績', '投手成績', '打擊成績', '守備成績'])
 if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
-  st.write('投手成績')
-  bp = pd.read_excel('bp.xlsx')
-  st.write(bp)   
+  if option==球隊成績:
+    st.write('##球隊成績')
+    bp = pd.read_excel('b.xlsx')
+    st.write(b) 
+  elif option==投手成績:
+    st.write('##投手成績')
+    bp = pd.read_excel('bp.xlsx')
+    st.write(bp)   
+  elif:option==打擊成績:
+   st.write('##打擊成績')
+    bp = pd.read_excel('bt.xlsx')
+    st.write(bt) 
+   else:
+    st.write('##守備成績')
+    bp = pd.read_excel('bc.xlsx')
+    st.write(bc)   
+    
 elif option == '統一7-Eleven獅':
   image = Image.open('unilion.png')
   st.image(image)
