@@ -31,7 +31,7 @@ if option == '中信兄弟':
     lt=pd.read_excel('lt.xlsx')
     st.write(bt) 
     plt.plot(bt.年度, bt.打擊率, color='y')
-    plt.plot(lt.年度, lt.打擊率, color='o')
+    plt.plot(lt.年度, lt.打擊率, color='b')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(bt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(lt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
