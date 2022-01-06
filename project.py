@@ -23,12 +23,6 @@ if option == '中信兄弟':
     st.header('投手成績')
     bp=pd.read_excel('bp.xlsx')
     st.write(bp)
-    ym = [None] * len(bp["年度"])     # 建立一個空列表，數量為年月的數量
-
-    # 以for迴圈逐一將年月資料類別轉成字串類別
-    for i in range(len(bp["年度"])):  
-    ym[i] = str(bp["年度"][i])
-    bp["年度"] = ym  # 將原本年月欄位資料替換掉
     plt.style.use("ggplot")               # 使用ggplot主題樣式
 
     #畫第一條線，plt.plot(x, y, c)參數分別為x軸資料、y軸資料及線顏色 = 紅色
