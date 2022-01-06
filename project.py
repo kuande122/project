@@ -32,7 +32,7 @@ if option == '中信兄弟':
     plt.plot(bt.年度, bt.打擊率, color='b')
     plt.xlabel('AVG') # 設定x軸標題
     plt.xticks(bt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
-    plt.title('CTBC Brothers ') # 設定圖表標題
+    plt.title('CTBC Brothers Batting AVG ') # 設定圖表標題
     st.pyplot(plt)
   else:
     st.header('守備成績')
