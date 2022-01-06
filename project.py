@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd               # 資料處理套件
 import matplotlib.pyplot as plt   # 資料視覺化套件
-import altair as alt
-import numpy as np
 from PIL import Image
 wang = pd.read_csv('wang.csv')
 wang.head(3)    # 顯示前3筆資料
