@@ -21,8 +21,8 @@ if option == '中信兄弟':
     st.write(b) 
   elif option1=='投手成績':
     st.header('投手成績')
-    bp=pd.read_excel('bp.xlsx')
-    st.write(bp)
+    Brothers Pitching=pd.read_excel('Brothers Pitching.xlsx')
+    st.write(Brothers Pitching)
                  
    
   elif option1=='打擊成績':
