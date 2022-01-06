@@ -20,5 +20,5 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
-motor = pd.read_xlsx("number of wang.xlsx")
+motor = pd.read_xlsx("wang.xlsx")
 motor.head(3)    # 顯示前3筆資料
