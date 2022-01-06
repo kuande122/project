@@ -53,4 +53,20 @@ elif option == '樂天桃猿':
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
+  if option1=='球隊成績':
+    st.write('##球隊成績')
+    g=pd.read_excel('g.xlsx')
+    st.write(g) 
+  elif option1=='投手成績':
+    st.write('##投手成績')
+    gp=pd.read_excel('gp.xlsx')
+    st.write(gp)   
+  elif option1=='打擊成績':
+    st.write('##打擊成績')
+    gt=pd.read_excel('gt.xlsx')
+    st.write(gt) 
+  else:
+    st.write('##守備成績')
+    gc=pd.read_excel('gc.xlsx')
+    st.write(gc)  
 
