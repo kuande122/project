@@ -35,7 +35,7 @@ if option == '中信兄弟':
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(bt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(lt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
-    plt.title('CTBC Brothers Batting AVG and VS Other Teams ') # 設定圖表標題
+    plt.title('CTBC Brothers Batting AVG VS Other Teams ') # 設定圖表標題
     
     st.pyplot(plt)
     
