@@ -7,11 +7,13 @@ option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Elev
 if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
+  st.write('投手成績')
   bp = pd.read_excel('bp.xlsx')
   st.write(bp)   
 elif option == '統一7-Eleven獅':
   image = Image.open('unilion.png')
   st.image(image)
+  st.write('投手成績')
   lp = pd.read_excel('lp.xlsx')
   st.write(lp)
 elif option == '味全龍':
