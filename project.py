@@ -21,7 +21,12 @@ if option == '中信兄弟':
   elif option1=='投手成績':
     st.header('投手成績')
     bp=pd.read_excel('bp.xlsx')
-    st.write(bp)   
+    st.write(bp)  
+    chart_data = pd.DataFrame(
+    np.random.randn(20, 3),
+    columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
    
   elif option1=='打擊成績':
     st.header('打擊成績')
