@@ -5,7 +5,6 @@ from PIL import Image
 st.set_page_config(
     page_title="猛祺的期末報告",
     page_icon='phil.ico'
-    layout="wide"
     )
 
 st.title('中華職棒數據查詢系統')
