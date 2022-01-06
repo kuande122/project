@@ -295,7 +295,7 @@ elif option == '味全龍':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
-        plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
+    plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.上壘率, '.-',color='red')
     plt.plot(GuardiansBatting.年度, GuardiansBatting.上壘率,'.-', color='darkblue')
