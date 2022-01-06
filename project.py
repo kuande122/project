@@ -23,9 +23,9 @@ if option == '中信兄弟':
     st.header('投手成績')
     BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
     UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
-    DragonsPitching=pd.read_excel('DragonsPitchting.xlsx')
-    RakutenPitchting=pd.read_excel('RakutenPitchting.xlsx')
-    GuardiansPitching=pd.read_excel('GuardiansPitchting.xlsx')
+    DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
+    RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
+    GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(BrothersPitching)
     st.header('數據分析')
     plt.plot(BrothersPitching.年度, BrothersPitching.打擊率, color='yellow')
@@ -38,7 +38,7 @@ if option == '中信兄弟':
     plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(RakutenPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(GuardiansPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
-    #plt.xticks(DragonsBatting.年度, rotation='vertical') # 會影響x座標軸數值更動
+    #plt.xticks(DragonsPitching.年度, rotation='vertical') # 會影響x座標軸數值更動
     plt.title('CTBC Brothers Pitch Era VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
     st.pyplot(plt)                 
