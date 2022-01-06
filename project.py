@@ -17,110 +17,108 @@ if option == '中信兄弟':
   st.image(image)
   if option1=='球隊成績':
     st.header('球隊成績')
-    b=pd.read_excel('b.xlsx')
-    st.write(b) 
+    Brothers=pd.read_excel('Brothers.xlsx')
+    st.write(Brothers) 
   elif option1=='投手成績':
     st.header('投手成績')
     BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
-    st.write(BrothersPitching)
-                 
-   
+    st.write(BrothersPitching)                  
   elif option1=='打擊成績':
     st.header('打擊成績')
-    bt=pd.read_excel('bt.xlsx')
-    lt=pd.read_excel('lt.xlsx')
-    st.write(bt) 
-    plt.plot(bt.年度, bt.打擊率, color='y')
-    plt.plot(lt.年度, lt.打擊率, color='b')
+    BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
+    UnilionsBatting=pd.read_excel('UnilionsBatting.xlsx')
+    st.write(BrothersBatting) 
+    plt.plot(BrothersBatting.年度, BrothersBatting.打擊率, color='y')
+    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, color='b')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(bt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(lt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
-    plt.title('CTBC Brothers Batting AVG VS Other Teams ') # 設定圖表標題
+    plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["bt", "lt"], loc = 'best')
     st.pyplot(plt)
     
   else:
     st.header('守備成績')
-    bc=pd.read_excel('bc.xlsx')
-    st.write(bc)   
+    BrothersDefense=pd.read_excel('BrothersDefense.xlsx')
+    st.write(BrothersDefense)   
     
 elif option == '統一7-Eleven獅':
   image = Image.open('unilion.png')
   st.image(image)
   if option1=='球隊成績':
     st.header('球隊成績')
-    l=pd.read_excel('l.xlsx')
+    Unilions=pd.read_excel('Unilions.xlsx')
     st.write(l) 
   elif option1=='投手成績':
     st.header('投手成績')
-    lp=pd.read_excel('lp.xlsx')
-    st.write(lp)   
+    UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
+    st.write(UnilionsPitching)   
   elif option1=='打擊成績':
     st.header('打擊成績')
-    lt=pd.read_excel('lt.xlsx')
-    st.write(lt) 
+    UnilionsBatting=pd.read_excel('UnilionsBatting.xlsx')
+    st.write(UnilionsBatting) 
   else:
     st.header('守備成績')
-    lc=pd.read_excel('lc.xlsx')
-    st.write(lc) 
+    UnilionsDefense=pd.read_excel('UnilionsDefense.xlsx')
+    st.write(UnilionsDefense) 
     
 elif option == '味全龍':
   image = Image.open('Dragons.png')
   st.image(image)
   if option1=='球隊成績':
     st.header('球隊成績')
-    w=pd.read_excel('w.xlsx')
-    st.write(w) 
+    Dragons=pd.read_excel('Dragons.xlsx')
+    st.write(Dragons) 
   elif option1=='投手成績':
     st.header('投手成績')
-    wp=pd.read_excel('wp.xlsx')
-    st.write(wp)   
+    DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
+    st.write(DragonsPitching)   
   elif option1=='打擊成績':
     st.header('打擊成績')
-    wt=pd.read_excel('wt.xlsx')
-    st.write(wt) 
+    DragonsBatting=pd.read_excel('DragonsBatting.xlsx')
+    st.write(DragonsBatting) 
   else:
     st.header('守備成績')
-    wc=pd.read_excel('wc.xlsx')
-    st.write(wc)  
+    DragonsDefense=pd.read_excel('DragonsDefense.xlsx')
+    st.write(DragonsDefense)  
   
 elif option == '樂天桃猿':
   image = Image.open('Rakuten.png')
   st.image(image)
   if option1=='球隊成績':
     st.header('球隊成績')
-    r=pd.read_excel('r.xlsx')
-    st.write(r) 
+    Rakuten=pd.read_excel('Rakuten.xlsx')
+    st.write(Rakuten) 
   elif option1=='投手成績':
     st.header('投手成績')
-    rp=pd.read_excel('rp.xlsx')
-    st.write(rp)   
+    RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
+    st.write(RakutenPitching)   
   elif option1=='打擊成績':
     st.header('打擊成績')
-    rt=pd.read_excel('rt.xlsx')
-    st.write(rt) 
+    RakutenBatting=pd.read_excel('RakutenBatting.xlsx')
+    st.write(RakutenBatting) 
   else:
     st.header('守備成績')
-    rc=pd.read_excel('rc.xlsx')
-    st.write(rc)  
+    RakutenDefense=pd.read_excel('RakutenDefense.xlsx')
+    st.write(RakutenDefense)  
   
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
   st.image(image)
   if option1=='球隊成績':
     st.header('球隊成績')
-    g=pd.read_excel('g.xlsx')
-    st.write(g) 
+    Guardians=pd.read_excel('Guardians.xlsx')
+    st.write(Guardians) 
   elif option1=='投手成績':
     st.header('投手成績')
-    gp=pd.read_excel('gp.xlsx')
-    st.write(gp)   
+    GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
+    st.write(GuardiansPitching)   
   elif option1=='打擊成績':
     st.header('打擊成績')
-    gt=pd.read_excel('gt.xlsx')
-    st.write(gt) 
+    GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
+    st.write(GuardiansBatting) 
   else:
     st.header('守備成績')
-    gc=pd.read_excel('gc.xlsx')
-    st.write(gc)  
+    GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
+    st.write(GuardiansDefense)  
 
