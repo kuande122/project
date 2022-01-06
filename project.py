@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd               # 資料處理套件
 import matplotlib.pyplot as plt   # 資料視覺化套件
 from PIL import Image
-st.title(‘中華職棒數據查詢系統’)
+st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
 a = st.sidebar.number_input(label = '在sidebar輸入一些數字')
 b = st.sidebar.text_input(label = '在sidebar輸入一些文字', value= '請在此輸入文字')
