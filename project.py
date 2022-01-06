@@ -17,7 +17,7 @@ if option == '中信兄弟':
     bp=pd.read_excel('bp.xlsx')
     st.write(bp)   
   elif option1=='打擊成績':
-    st.write(''##打擊成績'')
+    st.write('##打擊成績')
     bt=pd.read_excel('bt.xlsx')
     st.write(bt) 
   else:
