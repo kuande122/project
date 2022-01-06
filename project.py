@@ -28,12 +28,17 @@ if option == '中信兄弟':
   elif option1=='打擊成績':
     st.header('打擊成績')
     bt=pd.read_excel('bt.xlsx')
+    lt=pd.read_excel('lt.xlsx')
     st.write(bt) 
-    plt.plot(bt.年度, bt.打擊率, color='b')
+    plt.plot(bt.年度, bt.打擊率, color='y')
+    plt.plot(lt.年度, lt.打擊率, color='o')
     plt.xlabel('Season') # 設定x軸標題
     plt.xticks(bt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
-    plt.title('CTBC Brothers Batting AVG ') # 設定圖表標題
+    plt.xticks(lt.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.title('CTBC Brothers Batting AVG and VS Other Teams ') # 設定圖表標題
+    plt.legend(loc = 'lower left')
     st.pyplot(plt)
+    
   else:
     st.header('守備成績')
     bc=pd.read_excel('bc.xlsx')
