@@ -77,6 +77,10 @@ elif option == '統一7-Eleven獅':
   st.image(image)
   if option1=='球隊成績':
     st.header('球隊成績')
+    Unilions=pd.read_excel('Unilions.xlsx')
+    st.write(Unilions)    
+  elif option1=='投手成績':
+    st.header('投手成績')
     BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
     UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
     DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
@@ -97,11 +101,7 @@ elif option == '統一7-Eleven獅':
     #plt.xticks(DragonsPitching.年度, rotation='vertical') # 會影響x座標軸數值更動
     plt.title('Unilions Pitching Era VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
-    st.pyplot(plt)                 
-  elif option1=='投手成績':
-    st.header('投手成績')
-    UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
-    st.write(UnilionsPitching)   
+    st.pyplot(plt)                
   elif option1=='打擊成績':
     st.header('打擊成績')
     BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
