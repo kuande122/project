@@ -31,8 +31,8 @@ if option == '中信兄弟':
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率, color='y')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, color='b')
     plt.xlabel('Season') # 設定x軸標題
-    plt.xticks(Brothers.年度, rotation='vertical') # 設定x軸label以及垂直顯示
-    plt.xticks(Unilions.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(BrothersBatting.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(UnilionsBatting.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting"], loc = 'best')
     st.pyplot(plt)
