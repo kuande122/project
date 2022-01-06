@@ -54,11 +54,42 @@ elif option == '統一7-Eleven獅':
 elif option == '味全龍':
   image = Image.open('Dragons.png')
   st.image(image)
+  if option1=='球隊成績':
+    st.header('球隊成績')
+    w=pd.read_excel('w.xlsx')
+    st.write(w) 
+  elif option1=='投手成績':
+    st.header('投手成績')
+    wp=pd.read_excel('wp.xlsx')
+    st.write(wp)   
+  elif option1=='打擊成績':
+    st.header('打擊成績')
+    wt=pd.read_excel('wt.xlsx')
+    st.write(wt) 
+  else:
+    st.header('守備成績')
+    wc=pd.read_excel('wc.xlsx')
+    st.write(wc)  
   
 elif option == '樂天桃猿':
   image = Image.open('Rakuten.png')
   st.image(image)
-  
+  if option1=='球隊成績':
+    st.header('球隊成績')
+    r=pd.read_excel('r.xlsx')
+    st.write(r) 
+  elif option1=='投手成績':
+    st.header('投手成績')
+    rp=pd.read_excel('rp.xlsx')
+    st.write(rp)   
+  elif option1=='打擊成績':
+    st.header('打擊成績')
+    rt=pd.read_excel('rt.xlsx')
+    rt.write(rt) 
+  else:
+    st.header('守備成績')
+    rc=pd.read_excel('rc.xlsx')
+    st.write(rc)  
   
 elif option == '富邦悍將':
   image = Image.open('guardians.png')
