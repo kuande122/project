@@ -22,13 +22,16 @@ if option == '中信兄弟':
     st.header('投手成績')
     bp=pd.read_excel('bp.xlsx')
     st.write(bp)   
+    chart_data={
+    plt.plot(bp.年度, bt.防禦率, color='b')
+    plt.xlabel('年度') # 設定x軸標題
+    plt.xticks(bp.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.title('防禦率比較') # 設定圖表標題}
+    st.line_chart(chart_data)
   elif option1=='打擊成績':
     st.header('打擊成績')
     bt=pd.read_excel('bt.xlsx')
     st.write(bt) 
-   
-
-
   else:
     st.header('守備成績')
     bc=pd.read_excel('bc.xlsx')
