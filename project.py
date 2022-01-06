@@ -10,7 +10,7 @@ if option == '中信兄弟':
   st.image(image)
   if option==球隊成績:
     st.write('##球隊成績')
-    bp = pd.read_excel('b.xlsx')
+    b = pd.read_excel('b.xlsx')
     st.write(b) 
   elif option==投手成績:
     st.write('##投手成績')
@@ -18,11 +18,11 @@ if option == '中信兄弟':
     st.write(bp)   
   elif option==打擊成績:
    st.write('##打擊成績')
-    bp = pd.read_excel('bt.xlsx')
+    bt = pd.read_excel('bt.xlsx')
     st.write(bt) 
    else:
     st.write('##守備成績')
-    bp = pd.read_excel('bc.xlsx')
+    bc = pd.read_excel('bc.xlsx')
     st.write(bc)   
     
 elif option == '統一7-Eleven獅':
