@@ -5,7 +5,7 @@ from PIL import Image
 st.set_page_config(
     page_title="猛祺的期末報告",
     page_icon="st.image(phil)",
-    
+    phil = Image.open('phil.jpg')
     layout="centered",
     initial_sidebar_state="collapsed",
 )
