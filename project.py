@@ -23,7 +23,7 @@ if option == '中信兄弟':
     st.header('投手成績')
     bp=pd.read_excel('bp.xlsx')
     st.write(bp)
-    plt.style.use("ggplot")               # 使用ggplot主題樣式
+                   # 使用ggplot主題樣式
 
     #畫第一條線，plt.plot(x, y, c)參數分別為x軸資料、y軸資料及線顏色 = 紅色
     plt.plot(bp["年度"], bp["防禦率"],c = "r")  
