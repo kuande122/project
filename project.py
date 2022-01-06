@@ -8,15 +8,15 @@ option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績
 if option == '中信兄弟':
   image = Image.open('brothers.png')
   st.image(image)
-  if option1==球隊成績:
+  if option1=='球隊成績':
     st.write('##球隊成績')
     b=pd.read_excel('b.xlsx')
     st.write(b) 
-  elif option1==投手成績:
+  elif option1=='投手成績':
     st.write('##投手成績')
     bp=pd.read_excel('bp.xlsx')
     st.write(bp)   
-  elif option1==打擊成績:
+  elif option1=='打擊成績':
     st.write('##打擊成績')
     bt=pd.read_excel('bt.xlsx')
     st.write(bt) 
