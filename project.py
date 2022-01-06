@@ -39,7 +39,7 @@ if option == '中信兄弟':
     plt.xticks(RakutenPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     plt.xticks(GuardiansPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
     #plt.xticks(DragonsPitching.年度, rotation='vertical') # 會影響x座標軸數值更動
-    plt.title('CTBC Brothers Pitch Era VS Other Teams ') # 設定圖表標題
+    plt.title('CTBC Brothers Pitching Era VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
     st.pyplot(plt)                 
   elif option1=='打擊成績':
@@ -77,8 +77,27 @@ elif option == '統一7-Eleven獅':
   st.image(image)
   if option1=='球隊成績':
     st.header('球隊成績')
-    Unilions=pd.read_excel('Unilions.xlsx')
-    st.write(Unilions) 
+    BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
+    UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
+    DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
+    RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
+    GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
+    st.write(UnilionsPitching)
+    st.header('數據分析')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(RakutenPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(GuardiansPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    #plt.xticks(DragonsPitching.年度, rotation='vertical') # 會影響x座標軸數值更動
+    plt.title('Unilions Pitching Era VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
+    st.pyplot(plt)                 
   elif option1=='投手成績':
     st.header('投手成績')
     UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
@@ -121,8 +140,27 @@ elif option == '味全龍':
     st.write(Dragons) 
   elif option1=='投手成績':
     st.header('投手成績')
+    BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
+    UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
     DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
-    st.write(DragonsPitching)   
+    RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
+    GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
+    st.write(DragonsPitching)
+    st.header('數據分析')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(RakutenPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(GuardiansPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    #plt.xticks(DragonsPitching.年度, rotation='vertical') # 會影響x座標軸數值更動
+    plt.title('Dragons Pitching Era VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
+    st.pyplot(plt)   
   elif option1=='打擊成績':
     st.header('打擊成績')
     BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
@@ -160,8 +198,27 @@ elif option == '樂天桃猿':
     st.write(Rakuten) 
   elif option1=='投手成績':
     st.header('投手成績')
+    BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
+    UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
+    DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
     RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
-    st.write(RakutenPitching)   
+    GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
+    st.write(RakutenPitching)
+    st.header('數據分析')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(RakutenPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(GuardiansPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    #plt.xticks(DragonsPitching.年度, rotation='vertical') # 會影響x座標軸數值更動
+    plt.title('Rakuten Pitching Era VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
+    st.pyplot(plt)   
   elif option1=='打擊成績':
     st.header('打擊成績')
     BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
@@ -200,8 +257,27 @@ elif option == '富邦悍將':
     st.write(Guardians) 
   elif option1=='投手成績':
     st.header('投手成績')
+    BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
+    UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
+    DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
+    RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
-    st.write(GuardiansPitching)   
+    st.write(GuardiansPitching)
+    st.header('數據分析')
+    plt.plot(BrothersPitching.年度, BrothersPitching.防禦率, color='yellow')
+    plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率, color='darkorange')
+    plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, color='red')
+    plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率, color='darkblue')
+    plt.plot(RakutenPitching.年度, RakutenPitching.防禦率, color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks(BrothersPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(UnilionsPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(RakutenPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    plt.xticks(GuardiansPitching.年度, rotation='vertical') # 設定x軸label以及垂直顯示
+    #plt.xticks(DragonsPitching.年度, rotation='vertical') # 會影響x座標軸數值更動
+    plt.title('Guardians Pitching Era VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
+    st.pyplot(plt)       
   elif option1=='打擊成績':
     st.header('打擊成績')
     BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
