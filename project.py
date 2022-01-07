@@ -19,7 +19,7 @@ if option=='味全龍':
     st.subheader("折線圖")
     chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                              columns=['打擊率'],
-                             title="Brothers Batting AVG vs Other Teams"
+                             title=" AVG vs Other Teams"
                          )
     st.line_chart(chart_data)
   
