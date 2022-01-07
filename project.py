@@ -71,7 +71,7 @@ if option == '中信兄弟':
     plt.xticks(DragonsBatting.年度) ,
     plt.title('CTBC Brothers Batting Avg VS Other Teams ') ,# 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')]
-    st.(x)
+    st.write(x)
     
    
     plt.style.use("ggplot")
