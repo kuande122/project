@@ -44,6 +44,7 @@ plt.xticks(DragonsPitching.年度)
 plt.title('CTBC Brothers Pitching ERA VS Other Teams ',{'fontsize':10}) # 設定圖表標題
 plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
 st.pyplot(plt)
+x=st.button('點取看更多分析')
 if x:
     plt.subplot(2, 1 ,2)
     plt.style.use("ggplot") 
