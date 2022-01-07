@@ -98,7 +98,7 @@ if option == '中信兄弟':
     plt.title('CTBC Brothers Batting OBP VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
-    
+    if option1=='球隊成績':
     plt.plot(BrothersBatting.年度, BrothersBatting.長打率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.長打率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.長打率, '.-',color='red')
