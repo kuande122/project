@@ -34,6 +34,11 @@ if option=='味全龍':
 st.header('投手成績')
 st.write(BrothersPitching)
 st.header('數據分析')
+x=np.linspace(1,100)
+y=1/np.exp(x)
+
+# split window
+f, ax = plt.subplots(2,2,sharex='col',sharey='row'
 ax[1,0].plt.style.use("ggplot")
 ax[1,0].plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-' ,color='yellow')
 ax[1,0].plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-' ,color='darkorange')
