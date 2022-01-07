@@ -73,6 +73,7 @@ if option == '中信兄弟':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.tight_layout()
     plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
