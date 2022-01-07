@@ -23,14 +23,6 @@ RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
 GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
 
 
-
-if option=='味全龍':
-    st.subheader("折線圖")
-    chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
-                             columns=['打擊率'],
-                             
-                         )
-    st.line_chart(chart_data)
 st.header('投手成績')
 st.write(BrothersPitching)
 st.header('數據分析')
@@ -51,12 +43,8 @@ plt.xticks(DragonsPitching.年度)
 plt.title('CTBC Brothers Pitching ERA VS Other Teams ',{'fontsize':10}) # 設定圖表標題
 plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
 st.pyplot(plt)
+
 plt.tight_layout()
-
-
-
-
-
 
 st.header('數據分析')
 plt.subplot(2, 1 ,2)
