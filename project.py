@@ -73,6 +73,9 @@ if option == '中信兄弟':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    expander = st.beta_expander("點擊來展開...")
+    expander.write("如果你要顯示很多文字，但又不想佔大半空間，可以使用這種方式。")
+    if expander : 
     plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
