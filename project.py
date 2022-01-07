@@ -70,7 +70,6 @@ if option == '中信兄弟':
     plt.xticks(DragonsBatting.年度) 
     plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
-    plt.close()
     st.pyplot(plt)
     
     plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
