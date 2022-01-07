@@ -56,6 +56,7 @@ if option == '中信兄弟':
     GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
     st.write(BrothersBatting)
     st.header('數據分析')
+    x={
     plt.style.use("ggplot") 
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
@@ -70,8 +71,8 @@ if option == '中信兄弟':
     plt.xticks(GuardiansBatting.年度) 
     plt.xticks(DragonsBatting.年度) 
     plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
-    plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
-    st.pyplot(plt)
+    plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')}
+    st.pyplot(x)
     
    
     plt.style.use("ggplot")
