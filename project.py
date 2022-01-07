@@ -34,41 +34,42 @@ if option=='味全龍':
 st.header('投手成績')
 st.write(BrothersPitching)
 st.header('數據分析')
-fig, (ax1, ax2) = plt.subplots(1, 2, sharex = True, sharey = True, figsize = (12, 4.5))
-
-ax1.plt.style.use("ggplot")
-ax1.plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-' ,color='yellow')
-ax1.plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-' ,color='darkorange')
-ax1.plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
-ax1.plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率,'.-', color='darkblue')
-ax1.plt.plot(RakutenPitching.年度, RakutenPitching.防禦率,'.-', color='maroon')
-ax1.plt.xlabel('Season') # 設定x軸標題
-ax1.plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
-ax1.plt.xticks(BrothersPitching.年度) # 設定x軸
-ax1.plt.xticks(UnilionsPitching.年度) 
-ax1.plt.xticks(RakutenPitching.年度) 
-ax1.plt.xticks(GuardiansPitching.年度)
-ax1.plt.xticks(DragonsPitching.年度) 
-ax1.plt.title('CTBC Brothers Pitching ERA VS Other Teams ') # 設定圖表標題
-ax1.plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
-st.pyplot(ax1.plt)
+plt.subplot(2, 1 ,1)
+plt.style.use("ggplot")
+plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-' ,color='yellow')
+plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-' ,color='darkorange')
+plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
+plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率,'.-', color='darkblue')
+plt.plot(RakutenPitching.年度, RakutenPitching.防禦率,'.-', color='maroon')
+plt.xlabel('Season') # 設定x軸標題
+plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+plt.xticks(BrothersPitching.年度) # 設定x軸
+plt.xticks(UnilionsPitching.年度) 
+plt.xticks(RakutenPitching.年度) 
+plt.xticks(GuardiansPitching.年度)
+plt.xticks(DragonsPitching.年度) 
+plt.title('CTBC Brothers Pitching ERA VS Other Teams ') # 設定圖表標題
+plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
+st.pyplot(plt)
+plt.tight_layout()
 st.header('數據分析')
-ax2.plt.style.use("ggplot") 
-ax2.plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
-ax2.plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
-ax2.plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
-ax2.plt.plot(GuardiansBatting.年度, GuardiansBatting.打擊率,'.-', color='darkblue')
-ax2.plt.plot(RakutenBatting.年度, RakutenBatting.打擊率, '.-',color='maroon')
-ax2.plt.xlabel('Season') # 設定x軸標題
-ax2.plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
-ax2.plt.xticks(BrothersBatting.年度) # 設定x軸label以及垂直顯示
-ax2.plt.xticks(UnilionsBatting.年度) 
-ax2.plt.xticks(RakutenBatting.年度) 
-ax2.plt.xticks(GuardiansBatting.年度) 
-ax2.plt.xticks(DragonsBatting.年度) 
-ax2.plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
-ax2.plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
-st.pyplot(ax2.plt)
+plt.subplot(2, 1 ,2)
+plt.style.use("ggplot") 
+plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
+plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
+plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
+plt.plot(GuardiansBatting.年度, GuardiansBatting.打擊率,'.-', color='darkblue')
+plt.plot(RakutenBatting.年度, RakutenBatting.打擊率, '.-',color='maroon')
+plt.xlabel('Season') # 設定x軸標題
+plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+plt.xticks(BrothersBatting.年度) # 設定x軸label以及垂直顯示
+plt.xticks(UnilionsBatting.年度) 
+plt.xticks(RakutenBatting.年度) 
+plt.xticks(GuardiansBatting.年度) 
+plt.xticks(DragonsBatting.年度) 
+plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
+plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
+st.pyplot(plt)
     
 
 
