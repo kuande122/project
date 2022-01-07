@@ -56,22 +56,22 @@ if option == '中信兄弟':
     GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
     st.write(BrothersBatting)
     st.header('數據分析')
-    x=[plt.style.use("ggplot"), 
-    plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow'),
-    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange'),
-    plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red'),
-    plt.plot(GuardiansBatting.年度, GuardiansBatting.打擊率,'.-', color='darkblue'),
-    plt.plot(RakutenBatting.年度, RakutenBatting.打擊率, '.-',color='maroon'),
-    plt.xlabel('Season'), # 設定x軸標題
-    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014]),
-    plt.xticks(BrothersBatting.年度), # 設定x軸label以及垂直顯示
-    plt.xticks(UnilionsBatting.年度), 
-    plt.xticks(RakutenBatting.年度) ,
-    plt.xticks(GuardiansBatting.年度) ,
-    plt.xticks(DragonsBatting.年度) ,
-    plt.title('CTBC Brothers Batting Avg VS Other Teams ') ,# 設定圖表標題
-    plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')]
-    st.write(x)
+    x=[plt1.style.use("ggplot"), 
+    plt1.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow'),
+    plt1.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange'),
+    plt1.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red'),
+    plt1.plot(GuardiansBatting.年度, GuardiansBatting.打擊率,'.-', color='darkblue'),
+    plt1.plot(RakutenBatting.年度, RakutenBatting.打擊率, '.-',color='maroon'),
+    plt1.xlabel('Season'), # 設定x軸標題
+    plt1.xticks([2021,2020,2019,2018,2017,2016,2015,2014]),
+    plt1.xticks(BrothersBatting.年度), # 設定x軸label以及垂直顯示
+    plt1.xticks(UnilionsBatting.年度), 
+    plt1.xticks(RakutenBatting.年度) ,
+    plt1.xticks(GuardiansBatting.年度) ,
+    plt1.xticks(DragonsBatting.年度) ,
+    plt1.title('CTBC Brothers Batting Avg VS Other Teams ') ,# 設定圖表標題
+    plt1.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')]
+    st.pyplot(plt1)
     
    
     plt.style.use("ggplot")
