@@ -21,13 +21,13 @@ chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                          )
 st.line_chart(chart_data)
 st.subheader("折線圖")
-chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
+chart_data1= pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                          )
-st.line_chart(chart_data)
+st.line_chart(chart_data1)
 st.subheader("折線圖")
-chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
+chart_data2 = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                          )
-st.line_chart(chart_data)
+st.line_chart(chart_data2)
 left_column, middle_column, right_column = st.columns(3)
 
 
