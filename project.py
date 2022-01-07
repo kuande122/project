@@ -10,7 +10,7 @@ st.set_page_config(
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
 
-bar_chart = px.bar(pd.read_excel('BrothersBatting.xlsx'),
+bar_chart = (pd.read_excel('BrothersBatting.xlsx'),
                    x='年度',
                    y='安打',
                    text='Votes',
