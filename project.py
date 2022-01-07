@@ -59,7 +59,7 @@ plt.tight_layout()
 
 
 st.header('數據分析')
-plt.subplot(2, 1 ,2)
+plt.subplot(2, 1 ,3)
 plt.style.use("ggplot") 
 plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
 plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
