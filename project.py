@@ -26,7 +26,7 @@ df
 
 st.subheader("折線圖")
 chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
-                          usecols='a:b')
+                         )
 st.line_chart(chart_data)
 
 
