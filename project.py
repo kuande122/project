@@ -61,7 +61,7 @@ plt.xticks(UnilionsBatting.年度)
 plt.xticks(RakutenBatting.年度) 
 plt.xticks(GuardiansBatting.年度) 
 plt.xticks(DragonsBatting.年度) 
-plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
+plt.title('CTBC Brothers Batting Avg VS Other Teams ',{'fontsize':10}) # 設定圖表標題
 plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
 st.pyplot(plt)
     
