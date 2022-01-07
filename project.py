@@ -61,13 +61,7 @@ plt.title('CTBC Brothers Batting Avg VS Other Teams ',{'fontsize':10}) # 設定�
 plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
 st.pyplot(plt)
 plt.tight_layout()
-plt.subplots_adjust(left=0.125,
-                    bottom=0.1, 
-                    right=0.9, 
-                    top=0.9, 
-                    wspace=70, 
-                    hspace=10)
-    
+
 
 
 
