@@ -31,7 +31,7 @@ fig = px.bar(df, x="Product", y=["Comfort", "Sound", "Calls"], barmode='group', 
 # st.dataframe(df) # if need to display dataframe
 st.plotly_chart(fig)
 
-
+st.write('我好帥')
 
 
 
