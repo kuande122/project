@@ -13,7 +13,7 @@ st.sidebar.header('選擇球隊及數據')
 data = pd.read_excel("BrotherBatting.xlsx", sheet_name=None)
 df = pd.DataFrame(
     [["年度"], 
-    columns=["安打", "全壘打"]
+    columns=["安打", "全壘打"]]
 )
 fig = px.bar(df, x="年度", y=["安打", "全壘打"], barmode='group', height=400)
 # st.dataframe(df) # if need to display dataframe
