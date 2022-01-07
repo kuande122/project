@@ -34,7 +34,7 @@ if option=='味全龍':
 st.header('投手成績')
 st.write(BrothersPitching)
 st.header('數據分析')
-plt.subplot(2, 1 ,1)
+plt.subplot(2, 2 ,1)
 plt.style.use("ggplot")
 plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-' ,color='yellow')
 plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-' ,color='darkorange')
@@ -59,7 +59,7 @@ plt.tight_layout()
 
 
 st.header('數據分析')
-plt.subplot(2, 1 ,2)
+plt.subplot(2, 2 ,2)
 plt.style.use("ggplot") 
 plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
 plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
