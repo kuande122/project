@@ -12,6 +12,18 @@ st.sidebar.header('選擇球隊及數據')
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績', '投手成績', '打擊成績', '守備成績'])
 
+@st.cache
+def load_data(path):
+    df=pd.read_excel(path)
+    df.columns=df.columns.str.lower()
+    df['date']=pd.to_datetime(df['transaction_data']).dt.date
+    df['price']=df['price'].str.replace(",",'')(float)
+    return df
+
+df=load_data('BrothersBatting.xlsx')
+df
+
+
 st.subheader("折線圖")
 chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                           usecols='a:b')
