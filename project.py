@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-labels = '主場勝', 'AwayWin','HomeLose', 'AwayLose','HomeTie', 'AwayTie'
+labels = 'Home Win', 'AwayWin','HomeLose', 'AwayLose','HomeTie', 'AwayTie'
 sizes = [11, 15, 18, 13,1,2]
 explode = (0,0,0.1 ,0, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
 
