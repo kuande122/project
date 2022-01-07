@@ -56,8 +56,7 @@ if option == '中信兄弟':
     GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
     st.write(BrothersBatting)
     st.header('數據分析')
-    x={
-    plt.style.use("ggplot") 
+    x={plt.style.use("ggplot") 
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
