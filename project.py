@@ -52,6 +52,7 @@ plt.title('CTBC Brothers Pitching ERA VS Other Teams ') # 設定圖表標題
 plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
 st.pyplot(plt)
 plt.tight_layout()
+
 st.header('數據分析')
 plt.subplot(2, 1 ,2)
 plt.style.use("ggplot") 
