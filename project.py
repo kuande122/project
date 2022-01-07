@@ -13,6 +13,18 @@ st.sidebar.header('選擇球隊及數據')
 
 
 
+        df = pd.DataFrame(
+        [["2021", 1080, 77], ["2020", 1319, 143],["2019",1168,148],["2018",1152,91],["2017",1214,145],["2016",1460,169],
+        ["2015",1308,90],["2014",1083,52]],
+         columns=["Year", "StrikeOut", "BB"],
+        )
+
+        fig = px.bar(df, x="Year", y=["StrikeOut","BB"], barmode='group', height=400)
+        
+        st.plotly_chart(fig)
+
+
+
 import streamlit as st
 import pandas as pd
 import plotly.express as px
