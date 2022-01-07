@@ -12,15 +12,8 @@ st.sidebar.header('選擇球隊及數據')
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績', '投手成績', '打擊成績', '守備成績'])
 
-def get_data_from_excel(): df = pd.read_excel("BrothersBatting.xlsx" )
-df = get_data_from_excel() 
-st.write(df)
-
-
 st.subheader("折線圖")
-chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx")
-)
-
+chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"))
 st.line_chart(chart_data)
 
 
