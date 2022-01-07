@@ -9,6 +9,7 @@ st.set_page_config(
     )
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
+st.button('點取看更多分析')
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績', '投手成績', '打擊成績', '守備成績'])
 BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
@@ -43,24 +44,25 @@ plt.xticks(DragonsPitching.年度)
 plt.title('CTBC Brothers Pitching ERA VS Other Teams ',{'fontsize':10}) # 設定圖表標題
 plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
 st.pyplot(plt)
-plt.subplot(2, 1 ,2)
-plt.style.use("ggplot") 
-plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
-plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
-plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
-plt.plot(GuardiansBatting.年度, GuardiansBatting.打擊率,'.-', color='darkblue')
-plt.plot(RakutenBatting.年度, RakutenBatting.打擊率, '.-',color='maroon')
-plt.xlabel('Season') # 設定x軸標題
-plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
-plt.xticks(BrothersBatting.年度) # 設定x軸label以及垂直顯示
-plt.xticks(UnilionsBatting.年度) 
-plt.xticks(RakutenBatting.年度) 
-plt.xticks(GuardiansBatting.年度) 
-plt.xticks(DragonsBatting.年度) 
-plt.title('CTBC Brothers Batting Avg VS Other Teams ',{'fontsize':10}) # 設定圖表標題
-plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
-st.pyplot(plt)
-plt.subplots_adjust(left=0.125,
+if button:
+    plt.subplot(2, 1 ,2)
+    plt.style.use("ggplot") 
+    plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
+    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
+    plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
+    plt.plot(GuardiansBatting.年度, GuardiansBatting.打擊率,'.-', color='darkblue')
+    plt.plot(RakutenBatting.年度, RakutenBatting.打擊率, '.-',color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+    plt.xticks(BrothersBatting.年度) # 設定x軸label以及垂直顯示
+    plt.xticks(UnilionsBatting.年度) 
+    plt.xticks(RakutenBatting.年度) 
+    plt.xticks(GuardiansBatting.年度) 
+    plt.xticks(DragonsBatting.年度) 
+    plt.title('CTBC Brothers Batting Avg VS Other Teams ',{'fontsize':10}) # 設定圖表標題
+    plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
+    st.pyplot(plt)
+    plt.subplots_adjust(left=0.125,
                     bottom=0.1, 
                     right=0.9, 
                     top=0.9, 
