@@ -14,7 +14,7 @@ option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績
 
 st.subheader("折線圖")
 chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
-                          usecols:'a:b')
+                          usecols='a:b')
 st.line_chart(chart_data)
 
 
