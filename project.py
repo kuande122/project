@@ -9,7 +9,7 @@ st.set_page_config(
     )
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
-st.button('點取看更多分析')
+x=st.button('點取看更多分析')
 option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
 option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績', '投手成績', '打擊成績', '守備成績'])
 BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
@@ -44,7 +44,7 @@ plt.xticks(DragonsPitching.年度)
 plt.title('CTBC Brothers Pitching ERA VS Other Teams ',{'fontsize':10}) # 設定圖表標題
 plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
 st.pyplot(plt)
-if button:
+if x:
     plt.subplot(2, 1 ,2)
     plt.style.use("ggplot") 
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
