@@ -10,18 +10,14 @@ st.set_page_config(
     )
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
-data = pd.read_excel("BrothersBatting.xlsx", sheet_name=None)
-df = pd.DataFrame(
-    {"年度"}, 
-    columns={'安打': '全壘打'}
-)
-fig = px.bar(df, x={"年度"}, y={"安打", "全壘打"}, barmode='group', height=400)
-# st.dataframe(df) # if need to display dataframe
-st.plotly_chart(fig)
 
 
 
+import streamlit as st
+import pandas as pd
+import plotly.express as px
 
+# continue loading the data with your excel file, I was a bit too lazy to build an Excel file :)
 df = pd.DataFrame(
     [["Product A", 5.6, 7.8, 5], ["Product B", 5.8, 7.2, 4.9]],
     columns=["Product", "Comfort", "Sound", "Calls"]
@@ -31,7 +27,9 @@ fig = px.bar(df, x="Product", y=["Comfort", "Sound", "Calls"], barmode='group', 
 # st.dataframe(df) # if need to display dataframe
 st.plotly_chart(fig)
 
-st.write('我好帥')
+
+
+
 
 
 
