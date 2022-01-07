@@ -43,7 +43,6 @@ plt.xticks(DragonsPitching.年度)
 plt.title('CTBC Brothers Pitching ERA VS Other Teams ',{'fontsize':10}) # 設定圖表標題
 plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
 st.pyplot(plt)
-st.header('數據分析')
 plt.subplot(2, 1 ,2)
 plt.style.use("ggplot") 
 plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
