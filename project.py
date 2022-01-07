@@ -10,13 +10,14 @@ st.set_page_config(
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
 
-bar_chart = (pd.read_excel('BrothersBatting.xlsx'),
-                   x='年度',
-                   y='安打',
-                   text='Votes',
-                   color_discrete_sequence = ['#F63366']*len(df_grouped),
-                   template= 'plotly_white')
-st.plotly_chart(bar_chart)
+df = pd.DataFrame(
+    [["Product A", 5.6, 7.8, 5], ["Product B", 5.8, 7.2, 4.9]],
+    columns=["Product", "Comfort", "Sound", "Calls"]
+)
+
+fig = px.bar(df, x="Product", y=["Comfort", "Sound", "Calls"], barmode='group', height=400)
+# st.dataframe(df) # if need to display dataframe
+st.plotly_chart(fig)
 
 
 
