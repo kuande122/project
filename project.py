@@ -3,10 +3,8 @@ import numpy as np
 import pandas as pd
 win = ['Home Win', 'Away Win', 'Home Lose', 'Away Lose','Home Tie', 'Away Tie']
 wind = [11, 15, 18, 13, 2]
-Happiness_index_Female = [30, 60, 70, 55, 75]
 data={"win":win
-      ,"wind":wind
-      ,"Happiness_index_Female":Happiness_index_Female}
+      ,"wind":wind}
 df = pd.DataFrame(win)
 df
 explode = [0.2, 0, 0, 0,0]
