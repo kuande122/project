@@ -19,7 +19,8 @@ import plotly.express as px
 
 # continue loading the data with your excel file, I was a bit too lazy to build an Excel file :)
 df = pd.DataFrame(
-    [["2021", 1080, 77], ["2020", 1319, 143]],
+    [["2021", 1080, 77], ["2020", 1319, 143],["2019",1168,148],["2018",1152,91],["2017",1214,145],["2016",1460,169],
+     ["2015",1308,90],["2014",1083,52]],
     columns=["Year", "Hit", "Homerun"]
 )
 
