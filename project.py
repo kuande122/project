@@ -22,7 +22,7 @@ DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
 RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
 GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
 
-
+plt.tight_layout()
 st.header('投手成績')
 st.write(BrothersPitching)
 st.header('數據分析')
