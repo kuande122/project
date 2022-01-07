@@ -1,21 +1,15 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-win = ['Home Win', 'Away Win', 'Home Lose', 'Away Lose','Home Tie', 'Away Tie']
-wind = [11, 15, 18, 13,1,2]
-data={"win":win
-      ,"wind":wind}
-df = pd.DataFrame(win)
-df
-explode = [0.2, 0, 0, 0,0]
-fig ,ax = plt.subplots(figsize=(12,8))
-ax.pie(wind,
-      labels=win,
-      autopct='%.1f%%', # 比例格式
-      
-     
-      ), # 陰影
-ax.set_title("haha",fontsize=20)
-ax.legend(win, loc=3, fontsize='small')
-st.pyplot(fig)
 
+
+labels = 'Home Win', 'Away Win', 'Home Lose', 'Away Lose','Home Tie','Away Tie'
+sizes = [11, 15, 18, 13,1,2]
+explode = (0, 0,0.1,0,0,0 # only "explode" the 2nd slice (i.e. 'Hogs')
+
+fig1, ax1 = plt.subplots()
+ax1.pie(sizes, explode=explode, labels=labels, autopct='%1.1f%%',
+        shadow=True, startangle=90)
+ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+
+st.pyplot(fig1)
