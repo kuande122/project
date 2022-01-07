@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 win = ['Home Win', 'Away Win', 'Home Lose', 'Away Lose','Home Tie', 'Away Tie']
-wind = [11, 15, 18, 13, 2]
+wind = [11, 15, 18, 13,1,2]
 data={"win":win
       ,"wind":wind}
 df = pd.DataFrame(win)
