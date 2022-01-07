@@ -19,11 +19,11 @@ import plotly.express as px
 
 # continue loading the data with your excel file, I was a bit too lazy to build an Excel file :)
 df = pd.DataFrame(
-    [["年度 A", 5.6, 7.8, 5], ["年度 B", 5.8, 7.2, 4.9]],
-    columns=["年度", "安打", "全壘打"]
+    [["2021", 5.6, 7.8], ["2020", 5.8, 7.2]],
+    columns=["Year", "Hit", "Homerun"]
 )
 
-fig = px.bar(df, x="年度", y=["安打", "全壘打"], barmode='group', height=400)
+fig = px.bar(df, x="Year", y=["Hit", "Homerun"], barmode='group', height=400)
 # st.dataframe(df) # if need to display dataframe
 st.plotly_chart(fig)
 
