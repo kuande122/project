@@ -17,6 +17,5 @@ ax.pie(wind,
       ), # 陰影
 ax.set_title("haha",fontsize=20)
 ax.legend(win, loc=3, fontsize='small')
-st.pyplot(pie)
-
+st.plotly_chart(fig)
 
