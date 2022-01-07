@@ -1,156 +1,23 @@
-import streamlit as st
-import pandas as pd               # 資料處理套件
 import matplotlib.pyplot as plt
-import plotly.express as px# 資料視覺化套件
-import xlrd
-from PIL import Image
-st.set_page_config(
-    page_title="猛祺的期末報告",
-    page_icon='phil.ico'
-    )
-st.title('中華職棒數據查詢系統')
-st.sidebar.header('選擇球隊及數據')
-
-
-
-
-win = pd.read_elsx("Brothers.xlsx")
-plt.figure(figsize=(6,9))    # 顯示圖框架大小
-
-labels = win["勝敗場圓餅圖"]      # 製作圓餅圖的類別標籤
-separeted = (0, 0, 0.3, 0, 0.3)                  # 依據類別數量，分別設定要突出的區塊
-size = win["勝"]                         # 製作圓餅圖的數值來源
-
-plt.pie(size,                           # 數值
-        labels = labels,                # 標籤
-        autopct = "%1.1f%%",            # 將數值百分比並留到小數點一位
-        explode = separeted,            # 設定分隔的區塊位置
-        pctdistance = 0.6,              # 數字距圓心的距離
-        textprops = {"fontsize" : 12},  # 文字大小
-        shadow=True)                    # 設定陰影
-
- 
-plt.axis('equal')                                          # 使圓餅圖比例相等
-plt.title("Pie chart of car accident", {"fontsize" : 18})  # 設定標題及其文字大小
-plt.legend(loc = "best")                                   # 設定圖例及其位置為最佳
-
-plt.savefig("Pie chart of car accident.jpg",   # 儲存圖檔
-            bbox_inches='tight',               # 去除座標軸占用的空間
-            pad_inches=0.0)                    # 去除所有白邊
-
-
-
-    
-
-
-
-import streamlit as st
+import numpy as np
 import pandas as pd
-import plotly.express as px
-
-# continue loading the data with your excel file, I was a bit too lazy to build an Excel file :)
-df = pd.DataFrame(
-    [["2021", 1080, 77], ["2020", 1319, 143],["2019",1168,148],["2018",1152,91],["2017",1214,145],["2016",1460,169],
-     ["2015",1308,90],["2014",1083,52]],
-    columns=["Year", "Hit", "Homerun"]
-)
-
-fig = px.bar(df, x="Year", y=["Hit", "Homerun"], barmode='group', height=400)
-# st.dataframe(df) # if need to display dataframe
-st.plotly_chart(fig)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-option = st.sidebar.selectbox( '選擇球隊？', ['中信兄弟', '統一7-Eleven獅', '味全龍', '樂天桃猿','富邦悍將'])
-option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績', '投手成績', '打擊成績', '守備成績'])
-BrothersBatting=pd.read_excel('BrothersBatting.xlsx')
-UnilionsBatting=pd.read_excel('UnilionsBatting.xlsx')
-DragonsBatting=pd.read_excel('DragonsBatting.xlsx')
-RakutenBatting=pd.read_excel('RakutenBatting.xlsx')
-GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
-BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
-UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
-DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
-RakutenPitching=pd.read_excel('RakutenPitching.xlsx')
-GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
-
-plt.tight_layout()
-st.header('投手成績')
-st.write(BrothersPitching)
-st.header('數據分析')
-plt.subplot(2, 1 ,1)
-plt.style.use("ggplot")
-plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-' ,color='yellow')
-plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-' ,color='darkorange')
-plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
-plt.plot(GuardiansPitching.年度, GuardiansPitching.防禦率,'.-', color='darkblue')
-plt.plot(RakutenPitching.年度, RakutenPitching.防禦率,'.-', color='maroon')
-plt.xlabel('Season') # 設定x軸標題
-plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
-plt.xticks(BrothersPitching.年度) # 設定x軸
-plt.xticks(UnilionsPitching.年度) 
-plt.xticks(RakutenPitching.年度) 
-plt.xticks(GuardiansPitching.年度)
-plt.xticks(DragonsPitching.年度) 
-plt.title('CTBC Brothers Pitching ERA VS Other Teams ',{'fontsize':10}) # 設定圖表標題
-plt.legend(labels=["BrothersPitching", "UnilionsPitching","DragonsPitching","GuardiansPitching","RakutenPitching"], loc = 'best')
-st.pyplot(plt)
-x=st.button('點取看更多分析')
-if x:
-    plt.subplot(2, 1 ,2)
-    plt.style.use("ggplot") 
-    plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
-    plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
-    plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
-    plt.plot(GuardiansBatting.年度, GuardiansBatting.打擊率,'.-', color='darkblue')
-    plt.plot(RakutenBatting.年度, RakutenBatting.打擊率, '.-',color='maroon')
-    plt.xlabel('Season') # 設定x軸標題
-    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
-    plt.xticks(BrothersBatting.年度) # 設定x軸label以及垂直顯示
-    plt.xticks(UnilionsBatting.年度) 
-    plt.xticks(RakutenBatting.年度) 
-    plt.xticks(GuardiansBatting.年度) 
-    plt.xticks(DragonsBatting.年度) 
-    plt.title('CTBC Brothers Batting Avg VS Other Teams ',{'fontsize':10}) # 設定圖表標題
-    plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
-    st.pyplot(plt)
-    plt.subplots_adjust(left=0.125,
-                    bottom=0.1, 
-                    right=0.9, 
-                    top=0.9, 
-                    wspace=15.0, 
-                    hspace=15.0)
-
+win = ['Home Win', 'Away Win', 'Home Lose', 'Away Lose','Home Tie', 'Away Tie']
+wind = [11, 15, 18, 13, 2]
+Happiness_index_Female = [30, 60, 70, 55, 75]
+data={"win":win
+      ,"wind":wind
+      ,"Happiness_index_Female":Happiness_index_Female}
+df = pd.DataFrame(win)
+df
+explode = [0.2, 0, 0, 0,0]
+fig ,ax = plt.subplots(figsize=(12,8))
+ax.pie(wind,
+      labels=win,
+      autopct='%.1f%%', # 比例格式
+      explode=explode,  # 凸顯
+      shadow = True),   # 陰影
+ax.set_title("haha",fontsize=20)
+ax.legend(win, loc=3, fontsize='small')
+plt.show()
 
 
