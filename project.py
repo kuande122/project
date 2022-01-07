@@ -28,6 +28,7 @@ if option == '中信兄弟':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(BrothersPitching)
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-' ,color='yellow')
     plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-' ,color='darkorange')
     plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
@@ -71,23 +72,25 @@ if option == '中信兄弟':
     plt.title('CTBC Brothers Batting Avg VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
-    if option=='中信兄弟'and option1=='打擊成績':
-        plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
-        plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
-        plt.plot(DragonsBatting.年度, DragonsBatting.上壘率, '.-',color='red')
-        plt.plot(GuardiansBatting.年度, GuardiansBatting.上壘率,'.-', color='darkblue')
-        plt.plot(RakutenBatting.年度, RakutenBatting.上壘率, '.-',color='maroon')
-        plt.xlabel('Season') # 設定x軸標題
-        plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
-        plt.xticks(BrothersBatting.年度) # 設定x軸label以及垂直顯示
-        plt.xticks(UnilionsBatting.年度) 
-        plt.xticks(RakutenBatting.年度) 
-        plt.xticks(GuardiansBatting.年度) 
-        plt.xticks(DragonsBatting.年度) 
-        plt.title('CTBC Brothers Batting OBP VS Other Teams ') # 設定圖表標題
-        plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
-        st.pyplot(plt)
     
+    plt.style.use("ggplot")
+    plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
+    plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
+    plt.plot(DragonsBatting.年度, DragonsBatting.上壘率, '.-',color='red')
+    plt.plot(GuardiansBatting.年度, GuardiansBatting.上壘率,'.-', color='darkblue')
+    plt.plot(RakutenBatting.年度, RakutenBatting.上壘率, '.-',color='maroon')
+    plt.xlabel('Season') # 設定x軸標題
+    plt.xticks([2021,2020,2019,2018,2017,2016,2015,2014])
+    plt.xticks(BrothersBatting.年度) # 設定x軸label以及垂直顯示
+    plt.xticks(UnilionsBatting.年度) 
+    plt.xticks(RakutenBatting.年度) 
+    plt.xticks(GuardiansBatting.年度) 
+    plt.xticks(DragonsBatting.年度) 
+    plt.title('CTBC Brothers Batting OBP VS Other Teams ') # 設定圖表標題
+    plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
+    st.pyplot(plt)
+    
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.長打率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.長打率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.長打率, '.-',color='red')
@@ -114,6 +117,7 @@ if option == '中信兄弟':
     GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
     st.write(BrothersDefense)
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
     plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
     plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
@@ -147,6 +151,7 @@ elif option == '統一7-Eleven獅':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(UnilionsPitching)
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
     plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
     plt.plot(DragonsPitching.年度, DragonsPitching.防禦率,'.-', color='red')
@@ -171,6 +176,7 @@ elif option == '統一7-Eleven獅':
     GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
     st.write(UnilionsBatting) 
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
@@ -187,6 +193,7 @@ elif option == '統一7-Eleven獅':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.上壘率, '.-',color='red')
@@ -203,6 +210,7 @@ elif option == '統一7-Eleven獅':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.長打率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.長打率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.長打率, '.-',color='red')
@@ -228,6 +236,7 @@ elif option == '統一7-Eleven獅':
     GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
     st.write(UnilionsDefense) 
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
     plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
     plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
@@ -252,7 +261,7 @@ elif option == '味全龍':
     Dragons=pd.read_excel('Dragons.xlsx')
     st.write(Dragons) 
   elif option1=='投手成績':
-    st.header('投手成績')
+    st.header('投手成績')  
     BrothersPitching=pd.read_excel('BrothersPitching.xlsx')
     UnilionsPitching=pd.read_excel('UnilionsPitching.xlsx')
     DragonsPitching=pd.read_excel('DragonsPitching.xlsx')
@@ -260,6 +269,7 @@ elif option == '味全龍':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(DragonsPitching)
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
     plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
     plt.plot(DragonsPitching.年度, DragonsPitching.防禦率,'.-', color='red')
@@ -284,6 +294,7 @@ elif option == '味全龍':
     GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
     st.write(DragonsBatting) 
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, '.-',color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-',color='red')
@@ -300,6 +311,7 @@ elif option == '味全龍':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.上壘率, '.-',color='red')
@@ -316,6 +328,7 @@ elif option == '味全龍':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.長打率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.長打率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.長打率, '.-',color='red')
@@ -340,6 +353,7 @@ elif option == '味全龍':
     GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
     st.write(DragonsDefense) 
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
     plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
     plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
@@ -372,6 +386,7 @@ elif option == '樂天桃猿':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(RakutenPitching)
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
     plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
     plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
@@ -396,6 +411,7 @@ elif option == '樂天桃猿':
     GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
     st.write(RakutenBatting) 
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率, '.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, '.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.打擊率, '.-', color='red')
@@ -412,6 +428,7 @@ elif option == '樂天桃猿':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.上壘率, '.-',color='red')
@@ -427,7 +444,8 @@ elif option == '樂天桃猿':
     plt.title('Rakuten Batting OBP VS Other Teams ') # 設定圖表標題
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
-    
+   
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.長打率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.長打率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.長打率, '.-',color='red')
@@ -453,6 +471,7 @@ elif option == '樂天桃猿':
     GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
     st.write(RakutenDefense)
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
     plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
     plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
@@ -485,6 +504,7 @@ elif option == '富邦悍將':
     GuardiansPitching=pd.read_excel('GuardiansPitching.xlsx')
     st.write(GuardiansPitching)
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersPitching.年度, BrothersPitching.防禦率,'.-', color='yellow')
     plt.plot(UnilionsPitching.年度, UnilionsPitching.防禦率,'.-', color='darkorange')
     plt.plot(DragonsPitching.年度, DragonsPitching.防禦率, '.-',color='red')
@@ -509,6 +529,7 @@ elif option == '富邦悍將':
     GuardiansBatting=pd.read_excel('GuardiansBatting.xlsx')
     st.write(GuardiansBatting) 
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.打擊率, '.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.打擊率, '.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.打擊率,  '.-',color='red')
@@ -525,6 +546,7 @@ elif option == '富邦悍將':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.上壘率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.上壘率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.上壘率, '.-',color='red')
@@ -541,6 +563,7 @@ elif option == '富邦悍將':
     plt.legend(labels=["BrothersBatting", "UnilionsBatting","DragonsBatting","GuardiansBatting","RakutenBatting"], loc = 'best')
     st.pyplot(plt)
     
+    plt.style.use("ggplot")
     plt.plot(BrothersBatting.年度, BrothersBatting.長打率,'.-', color='yellow')
     plt.plot(UnilionsBatting.年度, UnilionsBatting.長打率,'.-', color='darkorange')
     plt.plot(DragonsBatting.年度, DragonsBatting.長打率, '.-',color='red')
@@ -565,6 +588,7 @@ elif option == '富邦悍將':
     GuardiansDefense=pd.read_excel('GuardiansDefense.xlsx')
     st.write(GuardiansDefense)  
     st.header('數據分析')
+    plt.style.use("ggplot")
     plt.plot(BrothersDefense.年度, BrothersDefense.守備率,'.-' ,color='yellow')
     plt.plot(UnilionsDefense.年度, UnilionsDefense.守備率,'.-' ,color='darkorange')
     plt.plot(DragonsDefense.年度, DragonsDefense.守備率, '.-',color='red')
