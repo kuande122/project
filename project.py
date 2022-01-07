@@ -10,7 +10,7 @@ st.set_page_config(
     )
 st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
-data = pd.read_excel("BrotherBatting.xlsx", sheet_name=None)
+data = pd.read_excel("BrothersBatting.xlsx", sheet_name=None)
 df = pd.DataFrame(
     ["年度"], 
     columns=["安打", "全壘打"]
