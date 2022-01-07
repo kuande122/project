@@ -17,3 +17,12 @@ df = get_data_from_excel()
 st.write(df)
 
 
+st.subheader("折線圖")
+chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
+np.random.randn(20, 3),
+columns=['a', 'b', 'c'])
+
+st.line_chart(chart_data)
+
+
+
