@@ -14,6 +14,6 @@ option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績
 
 def get_data_from_excel(): df = pd.read_excel("BrothersBatting.xlsx" )
 df = get_data_from_excel() 
-df
+st.write(df)
 
 
