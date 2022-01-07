@@ -67,7 +67,7 @@ plt.subplots_adjust(left=0.125,
                     right=0.9, 
                     top=0.9, 
                     wspace=0.5, 
-                    hspace=0.1)
+                    hspace=10)
     
 
 
