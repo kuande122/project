@@ -15,20 +15,20 @@ option1 = st.sidebar.selectbox( '選擇所想查看的數據？', ['球隊成績
 
 
 
-
-st.subheader("折線圖")
-chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
+if option='味全龍':
+    st.subheader("折線圖")
+    chart_data = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                          )
-st.line_chart(chart_data)
-st.subheader("折線圖")
-chart_data1= pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
+    st.line_chart(chart_data)
+    st.subheader("折線圖")
+    chart_data1= pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                          )
-st.line_chart(chart_data1)
-st.subheader("折線圖")
-chart_data2 = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
+    st.line_chart(chart_data1)
+    st.subheader("折線圖")
+    chart_data2 = pd.DataFrame(pd.read_excel("BrothersBatting.xlsx"),
                          )
-st.line_chart(chart_data2)
-left_column, middle_column, right_column = st.columns(3)
+    st.line_chart(chart_data2)
+    left_column, middle_column, right_column = st.columns(3)
 
 
 
