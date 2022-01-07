@@ -12,10 +12,10 @@ st.title('中華職棒數據查詢系統')
 st.sidebar.header('選擇球隊及數據')
 data = pd.read_excel("BrothersBatting.xlsx", sheet_name=None)
 df = pd.DataFrame(
-    ["年度"], 
+    {"年度"}, 
     columns={'安打': '全壘打'}
 )
-fig = px.bar(df, x="年度", y=["安打", "全壘打"], barmode='group', height=400)
+fig = px.bar(df, x={"年度"}, y={"安打", "全壘打"}, barmode='group', height=400)
 # st.dataframe(df) # if need to display dataframe
 st.plotly_chart(fig)
 
