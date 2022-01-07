@@ -13,7 +13,7 @@ ax.pie(wind,
       labels=win,
       autopct='%.1f%%', # 比例格式
       explode=explode,  # 凸顯
-      shadow = True),   # 陰影
+      ),   # 陰影
 ax.set_title("haha",fontsize=20)
 ax.legend(win, loc=3, fontsize='small')
 plt.show()
