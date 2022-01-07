@@ -13,15 +13,34 @@ st.sidebar.header('選擇球隊及數據')
 
 
 
-        df = pd.DataFrame(
-        [["2021", 1080, 77], ["2020", 1319, 143],["2019",1168,148],["2018",1152,91],["2017",1214,145],["2016",1460,169],
-        ["2015",1308,90],["2014",1083,52]],
-         columns=["Year", "StrikeOut", "BB"],
-        )
 
-        fig = px.bar(df, x="Year", y=["StrikeOut","BB"], barmode='group', height=400)
-        
-        st.plotly_chart(fig)
+win = pd.read_elsx("Brothers.xlsx")
+plt.figure(figsize=(6,9))    # 顯示圖框架大小
+
+labels = win["勝敗場圓餅圖"]      # 製作圓餅圖的類別標籤
+separeted = (0, 0, 0.3, 0, 0.3)                  # 依據類別數量，分別設定要突出的區塊
+size = win["勝"]                         # 製作圓餅圖的數值來源
+
+plt.pie(size,                           # 數值
+        labels = labels,                # 標籤
+        autopct = "%1.1f%%",            # 將數值百分比並留到小數點一位
+        explode = separeted,            # 設定分隔的區塊位置
+        pctdistance = 0.6,              # 數字距圓心的距離
+        textprops = {"fontsize" : 12},  # 文字大小
+        shadow=True)                    # 設定陰影
+
+ 
+plt.axis('equal')                                          # 使圓餅圖比例相等
+plt.title("Pie chart of car accident", {"fontsize" : 18})  # 設定標題及其文字大小
+plt.legend(loc = "best")                                   # 設定圖例及其位置為最佳
+
+plt.savefig("Pie chart of car accident.jpg",   # 儲存圖檔
+            bbox_inches='tight',               # 去除座標軸占用的空間
+            pad_inches=0.0)                    # 去除所有白邊
+
+
+
+    
 
 
 
