@@ -11,7 +11,7 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="rr gif">',
     unsafe_allow_html=True,
 )
-st.image("rr.gif", format = 'GIF'
+st.image("rr.gif", format = 'GIF')
 
 labels = 'Home Win', 'Away Win','Home Lose', 'Away Lose','Home Tie', 'Away Tie'
 sizes = [11, 15, 18, 13,1,2]
