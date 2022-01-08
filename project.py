@@ -2,6 +2,16 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import streamlit as st
+import base64
+file_ = open("rr.gif", "rb")
+contents = file_.read()
+data_url = base64.b64encode(contents).decode("utf-8")
+file_.close()
+st.markdown(
+    f'<img src="data:image/gif;base64,{data_url}" alt="rr gif">',
+    unsafe_allow_html=True,
+)
+st.image("rr.gif", format = 'GIF'
 
 labels = 'Home Win', 'Away Win','Home Lose', 'Away Lose','Home Tie', 'Away Tie'
 sizes = [11, 15, 18, 13,1,2]
