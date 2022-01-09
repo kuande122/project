@@ -13,8 +13,8 @@ st.markdown(
 )
 
 col1, col2 = st.columns(2)
-col1.metric("季冠軍", "1 次")
-col2.metric("年度冠軍", "10 次")
+col1.metric("季冠軍", "1  次")
+col2.metric("年度冠軍", "10  次")
 labels = 'Home Win', 'Away Win','Home Lose', 'Away Lose','Home Tie', 'Away Tie'
 sizes = [11, 15, 18, 13,1,2]
 explode = (0,0,0.2 ,0, 0, 0)  # only "explode" the 2nd slice (i.e. 'Hogs')
