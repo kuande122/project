@@ -11,7 +11,6 @@ st.markdown(
     f'<img src="data:image/gif;base64,{data_url}" alt="rr gif">',
     unsafe_allow_html=True,
 )
-
 col1, col2 = st.columns(2)
 col1.metric("季冠軍🏆", "1  次")
 col2.metric("年度冠軍🏆", "10  次")
@@ -28,10 +27,24 @@ ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 st.pyplot(fig1)
 import streamlit as st
-import pandas as pd
-import numpy as np
-df = pd.DataFrame(
-     np.random.randn(1, 1) / [25, 25] + [24.20007463228274, 120.6848141301219],
-     columns=['lat', 'lon'])
-24.20007463228274, 120.6848141301219
-st.map(df)
+from streamlit_folium import folium_static
+import folium
+
+page = st.radio("Select map type", ["Single map", "Dual map"], index=0)
+
+# center on Liberty Bell
+if page == "Single map":
+    m = folium.Map(location=[39.949610, -75.150282], zoom_start=16)
+elif page == "Dual map":
+    m = folium.plugins.DualMap(location=[39.949610, -75.150282], zoom_start=16)
+
+# add marker for Liberty Bell
+tooltip = "Liberty Bell"
+folium.Marker(
+    [39.949610, -75.150282], popup="Liberty Bell", tooltip=tooltip
+).add_to(m)
+
+# call to render Folium map in Streamlit
+folium_static(m)
+
+
