@@ -21,7 +21,7 @@ with st.echo():
     # add marker for Liberty Bell
     tooltip = "Liberty Bell"
     folium.Marker(
-        [39.949610, -75.150282], popup="Liberty Bell", tooltip=tooltip
+        [25.04054,121.44768], popup="全富武裝", tooltip=tooltip
     ).add_to(m)
 
     # call to render Folium map in Streamlit
