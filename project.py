@@ -30,28 +30,8 @@ st.pyplot(fig1)
 import streamlit as st
 import pandas as pd
 import numpy as np
-25.113698764078524, 121.53297854083141
 df = pd.DataFrame(
-     np.random.randn(1, 2) /[50, 50]+[25.1136564,121.533027],
-
+     np.random.randn(1000, 2) / [50, 50] + [24.20007463228274, 120.6848141301219],
      columns=['lat', 'lon'])
-df = pd.DataFrame(
-     np.random.randn(1, 2) /[50, 50]+[25.113698764078524, 121.53297854083141],
-
-     columns=['lat', 'lon'])
-
+24.20007463228274, 120.6848141301219
 st.map(df)
-import folium
-
-
-m = folium.Map(location=[25.1136564, 121.533027])
-m
-m.save("index.html")
-folium.Map(location=[25.1136564, 121.533027], zoom_start=13)
-folium.Map(location=[25.1136564, 121.533027],
-           tiles='Mapbox',
-           API_key='your.API.key')
-folium.Map(location=[25.1136564,  121.533027],
-           zoom_start=12,
-           tiles='http://{s}.tiles.yourtiles.com/{z}/{x}/{y}.png',
-           attr='My Data Attribution')
