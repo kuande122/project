@@ -46,3 +46,12 @@ import folium
 
 m = folium.Map(location=[25.1136564, 121.533027])
 m
+m.save("index.html")
+folium.Map(location=[25.1136564, 121.533027], zoom_start=13)
+folium.Map(location=[25.1136564, 121.533027],
+           tiles='Mapbox',
+           API_key='your.API.key')
+folium.Map(location=[25.1136564,  121.533027],
+           zoom_start=12,
+           tiles='http://{s}.tiles.yourtiles.com/{z}/{x}/{y}.png',
+           attr='My Data Attribution')
