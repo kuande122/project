@@ -45,3 +45,4 @@ import folium
 
 
 m = folium.Map(location=[25.1136564, 121.533027])
+m
