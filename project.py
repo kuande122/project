@@ -32,7 +32,7 @@ import pandas as pd
 import numpy as np
 
 df = pd.DataFrame(
-     np.random.randn(1, 2) /[50, 50]+[25.045035,121.44759],
+     np.random.randn(1, 2) /[50, 50]+[25.0450343,121.44759],
      columns=['lat', 'lon'])
 
 st.map(df)
