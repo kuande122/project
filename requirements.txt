@@ -6,4 +6,4 @@ statsmodels
 xlrd
 openpyxl
 plotly
-folium
+streamlit-folium
