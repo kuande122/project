@@ -45,6 +45,6 @@ folium.Marker(
 ).add_to(m)
 
 # call to render Folium map in Streamlit
-folium_static(m)
+#folium_static(m)
 
 
