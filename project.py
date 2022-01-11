@@ -32,6 +32,10 @@ import pandas as pd
 import numpy as np
 25.113698764078524, 121.53297854083141
 df = pd.DataFrame(
+     np.random.randn(1, 2) /[50, 50]+[121°31'59.1" , 25°6'49.01],
+
+     columns=['lat', 'lon'])
+df = pd.DataFrame(
      np.random.randn(1, 2) /[50, 50]+[25.113698764078524, 121.53297854083141],
 
      columns=['lat', 'lon'])
