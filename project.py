@@ -30,9 +30,9 @@ st.pyplot(fig1)
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+25.113698764078524, 121.53297854083141
 df = pd.DataFrame(
-     np.random.randn(1, 2) /[50, 50]+[25。114048489559362, 121。53297854083141],
+     np.random.randn(1, 2) /[50, 50]+[25.113698764078524, 121.53297854083141],
 
      columns=['lat', 'lon'])
 
