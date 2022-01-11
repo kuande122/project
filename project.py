@@ -41,3 +41,7 @@ df = pd.DataFrame(
      columns=['lat', 'lon'])
 
 st.map(df)
+import folium
+
+
+m = folium.Map(location=[25.1136564, 121.533027])
