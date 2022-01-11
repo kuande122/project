@@ -27,7 +27,7 @@ ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
 st.pyplot(fig1)
 import streamlit as st
-#from streamlit_folium import folium_static
+from streamlit_folium import folium_static
 import folium
 
 page = st.radio("Select map type", ["Single map", "Dual map"], index=0)
@@ -45,6 +45,6 @@ folium.Marker(
 ).add_to(m)
 
 # call to render Folium map in Streamlit
-#folium_static(m)
+folium_static(m)
 
 
