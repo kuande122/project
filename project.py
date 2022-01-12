@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_folium import folium_static
 import folium
+from PIL import Image 
  # center on Liberty Bell
 col1, col2 = st.columns(2)
 with col1:
