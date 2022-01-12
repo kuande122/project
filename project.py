@@ -2,7 +2,9 @@ import streamlit as st
 from streamlit_folium import folium_static
 import folium
  # center on Liberty Bell
-m = folium.Map(location=[25.04054,121.44768], zoom_start=16)
+col1, col2 = st.columns(2)
+col1.st.write('新北新莊棒球場')
+col2.m = folium.Map(location=[25.04054,121.44768], zoom_start=16)
 
  # add marker for Liberty Bell
 tooltip = "新北新莊棒球場"
@@ -10,7 +12,7 @@ folium.Marker([25.04054,121.44768], popup="新北新莊棒球場", tooltip=toolt
     ).add_to(m)
 
  # call to render Folium map in Streamlit
-folium_static(m)
+col2.folium_static(m)
 m1 = folium.Map(location=[24.19978, 120.68498], zoom_start=16)
 
  # add marker for Liberty Bell
