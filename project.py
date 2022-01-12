@@ -26,5 +26,5 @@ with col1:
  image = Image.open('123.png')
  st.image(image)
 with col2:
- image = Image.open('rakuten.png')
+ image = Image.open('Rakuten.png')
  st.image(image)
