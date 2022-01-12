@@ -12,7 +12,7 @@ with col1:
  st.write('螢幕：外野：LED大螢幕（左）、LED螢幕（右）內野：環狀屏LED')
  st.write('觀眾席數：12,150人 內野數：8,150人 外野數：4,000人')
  st.write('全壘打牆距離：左外野：325英呎 中外野：400英呎 右外野：325英呎')
- image = Image.open('新莊全景.jpg')
+ image = Image.open('123.png')
  st.image(image)
 with col2:
  # add marker for Liberty Bell
@@ -24,67 +24,4 @@ with col2:
  # call to render Folium map in Streamlit
  folium_static(m)
 
-col1, col2 = st.columns(2)
-with col1:
- st.header('主場:臺中洲際棒球場')
- st.write('全名：新北市立新莊棒球場（XinZhuang Baseball Stadium）')
- st.write('地址：臺中市北屯區崇德路三段835號')
- st.write('觀眾席數：約兩萬席（內野14,321席對號座位，外野5,000席自由座位）')
- st.write('全壘打牆距離：左外野：325英呎 中外野：400英呎 右外野：325英呎')
- image = Image.open('台中洲際棒球場.png')
- st.image(image)
-with col2:
- m1 = folium.Map(location=[24.19978, 120.68498], zoom_start=16)
 
- # add marker for Liberty Bell
- tooltip = "臺中洲際棒球場"
- folium.Marker([24.19978, 120.68498], popup="臺中洲際棒球場", tooltip=tooltip
-    ).add_to(m1)
-
- # call to render Folium map in Streamlit
- folium_static(m1)
- 
- 
- 
- 
- 
- 
-m2 = folium.Map(location=[25.00054,121.20038], zoom_start=16)
-
- # add marker for Liberty Bell
-tooltip = "桃園國際棒球場"
-folium.Marker([25.00054,121.20038], popup="桃園國際棒球場", tooltip=tooltip
-    ).add_to(m2)
-
- # call to render Folium map in Streamlit
-folium_static(m2)
-m3 = folium.Map(location=[22.98043, 120.2062], zoom_start=16)
-
- # add marker for Liberty Bell
-tooltip = "臺南市立棒球場"
-folium.Marker([22.98043, 120.2062], popup="臺南市立棒球場", tooltip=tooltip
-    ).add_to(m3)
-
- # call to render
-folium_static(m3)
-
-m4 = folium.Map(location=[23.7171965, 120.5362392], zoom_start=16)
-
- # add marker for Liberty Bell
-tooltip = "雲林斗六棒球場"
-folium.Marker([23.7171965, 120.5362392], popup="雲林斗六棒球場", tooltip=tooltip
-    ).add_to(m4)
-
- # call to render
-folium_static(m4)
-
-
-m5 = folium.Map(location=[25.11374, 121.53345], zoom_start=16)
-
- # add marker for Liberty Bell
-tooltip = "臺北天母棒球場"
-folium.Marker([25.11374, 121.53345], popup="臺北天母棒球場", tooltip=tooltip
-    ).add_to(m5)
-
- # call to render
-folium_static(m5)
