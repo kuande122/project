@@ -15,18 +15,25 @@ with col1:
  st.write('營運管理：富邦金控')
  st.write('管理與維護：富邦運動場館股份有限公司')
  st.write('營運與使用：富邦育樂股份有限公司')
- image = Image.open('新莊全景.jpg')
- st.image(image)
 
 with col2:
  # add marker for Liberty Bell
- m = folium.Map(location=[25.04054,121.44768], zoom_start=16)
+ m = folium.Map(location=[25.04054,121.44768], zoom_start=20)
  tooltip = "新北新莊棒球場"
  folium.Marker([25.04054,121.44768], popup="新北市立新莊棒球場", tooltip=tooltip
     ).add_to(m)
 
  # call to render Folium map in Streamlit
  folium_static(m)
+col1, col2 = st.columns(2)
+with col1:
+ image = Image.open('新莊全景.jpg')
+ st.image(image)
+with col2:
+ image = Image.open('新莊棒球場座位圖.jpg')
+ st.image(image)
+
+
 m1 = folium.Map(location=[24.19978, 120.68498], zoom_start=16)
 
  # add marker for Liberty Bell
