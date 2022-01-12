@@ -38,3 +38,13 @@ folium.Marker([22.98043, 120.2062], popup="台南市立棒球場", tooltip=toolt
 
  # call to render
 folium_static(m3)
+
+m4 = folium.Map(location=[23.7171965, 120.5362392], zoom_start=16)
+
+ # add marker for Liberty Bell
+tooltip = "雲林斗六棒球場"
+folium.Marker([23.7171965, 120.5362392], popup="雲林斗六棒球場", tooltip=tooltip
+    ).add_to(m4)
+
+ # call to render
+folium_static(m4)
