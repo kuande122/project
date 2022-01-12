@@ -22,6 +22,9 @@ with col2:
 
  # call to render Folium map in Streamlit
  folium_static(m)
-
-image = Image.open('123.png')
-st.image(image)
+with col1:
+ image = Image.open('123.png')
+ st.image(image)
+with col2:
+ image = Image.open('rakuten.png')
+ st.image(image)
