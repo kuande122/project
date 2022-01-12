@@ -19,4 +19,4 @@ folium.Marker([24.19978, 120.68498], popup="台中洲際棒球場", tooltip=tool
     ).add_to(m)
 
  # call to render Folium map in Streamlit
-folium_static(m)
+folium_static(m1)
