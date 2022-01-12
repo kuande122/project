@@ -37,4 +37,4 @@ folium.Marker([22.98043, 120.2062], popup="台南市立棒球場", tooltip=toolt
     ).add_to(m3)
 
  # call to render
- folium_static(m3)
+folium_static(m3)
