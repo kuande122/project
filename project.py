@@ -4,12 +4,14 @@ import folium
  # center on Liberty Bell
 col1, col2 = st.columns(2)
 with col1:
- st.title('新北新莊棒球場')
- m = folium.Map(location=[25.04054,121.44768], zoom_start=16)
+ st.title('新北市立新莊棒球場')
+
+
 with col2:
  # add marker for Liberty Bell
- tooltip = "新北新莊棒球場"
- folium.Marker([25.04054,121.44768], popup="新北新莊棒球場", tooltip=tooltip
+ m = folium.Map(location=[25.04054,121.44768], zoom_start=16)
+ tooltip = "新北市立新莊棒球場"
+ folium.Marker([25.04054,121.44768], popup="新北市立新莊棒球場", tooltip=tooltip
     ).add_to(m)
 
  # call to render Folium map in Streamlit
