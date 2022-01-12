@@ -14,8 +14,8 @@ folium_static(m)
 m1 = folium.Map(location=[24.19978, 120.68498], zoom_start=16)
 
  # add marker for Liberty Bell
-tooltip = "台中洲際棒球場"
-folium.Marker([24.19978, 120.68498], popup="台中洲際棒球場", tooltip=tooltip
+tooltip = "臺中洲際棒球場"
+folium.Marker([24.19978, 120.68498], popup="臺中洲際棒球場", tooltip=tooltip
     ).add_to(m1)
 
  # call to render Folium map in Streamlit
@@ -32,8 +32,8 @@ folium_static(m2)
 m3 = folium.Map(location=[22.98043, 120.2062], zoom_start=16)
 
  # add marker for Liberty Bell
-tooltip = "台南市立棒球場"
-folium.Marker([22.98043, 120.2062], popup="台南市立棒球場", tooltip=tooltip
+tooltip = "臺南市立棒球場"
+folium.Marker([22.98043, 120.2062], popup="臺南市立棒球場", tooltip=tooltip
     ).add_to(m3)
 
  # call to render
@@ -48,3 +48,14 @@ folium.Marker([23.7171965, 120.5362392], popup="雲林斗六棒球場", tooltip=
 
  # call to render
 folium_static(m4)
+
+
+m5 = folium.Map(location=[25.11374, 121.53345], zoom_start=16)
+
+ # add marker for Liberty Bell
+tooltip = "臺北天母棒球場"
+folium.Marker([25.11374, 121.53345], popup="臺北天母棒球場", tooltip=tooltip
+    ).add_to(m5)
+
+ # call to render
+folium_static(m5)
