@@ -16,7 +16,7 @@ m1 = folium.Map(location=[24.19978, 120.68498], zoom_start=16)
  # add marker for Liberty Bell
 tooltip = "台中洲際棒球場"
 folium.Marker([24.19978, 120.68498], popup="台中洲際棒球場", tooltip=tooltip
-    ).add_to(m)
+    ).add_to(m1)
 
  # call to render Folium map in Streamlit
 folium_static(m1)
