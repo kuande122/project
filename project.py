@@ -5,7 +5,7 @@ import folium
 col1, col2 = st.columns(2)
 with col1:
  st.title('新北市立新莊棒球場')
- image = Image.open('新莊全景.')
+ image = Image.open('新莊全景.jpg')
  st.image(image)
 
 with col2:
