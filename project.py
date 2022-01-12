@@ -12,10 +12,8 @@ with col1:
  st.write('螢幕：外野：LED大螢幕（左）、LED螢幕（右）內野：環狀屏LED')
  st.write('觀眾席數：12,150人 內野數：8,150人 外野數：4,000人')
  st.write('全壘打牆距離：左外野：325英呎 中外野：400英呎 右外野：325英呎')
- st.write('營運管理：富邦金控')
- st.write('管理與維護：富邦運動場館股份有限公司')
- st.write('營運與使用：富邦育樂股份有限公司')
-
+ image = Image.open('新莊全景.jpg')
+ st.image(image)
 with col2:
  # add marker for Liberty Bell
  m = folium.Map(location=[25.04054,121.44768], zoom_start=20)
@@ -25,13 +23,6 @@ with col2:
 
  # call to render Folium map in Streamlit
  folium_static(m)
-col1, col2 = st.columns(2)
-with col1:
- image = Image.open('新莊全景.jpg')
- st.image(image)
-with col2:
- image = Image.open('新莊棒球場座位圖.jpg')
- st.image(image)
 
 
 m1 = folium.Map(location=[24.19978, 120.68498], zoom_start=16)
