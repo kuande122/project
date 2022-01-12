@@ -6,6 +6,15 @@ from PIL import Image
 col1, col2 = st.columns(2)
 with col1:
  st.header('新北新莊棒球場')
+ st.write('全名：新北市立新莊棒球場（XinZhuang Baseball Stadium）')
+ st.write('地址：新北市新莊區立德里和興街66號')
+ st.write('草皮：天然草皮（百慕達草）')
+ st.write('螢幕：外野：LED大螢幕（左）、LED螢幕（右）內野：環狀屏LED')
+ st.write('觀眾席數：12,150人 內野數：8,150人 外野數：4,000人')
+ st.write('全壘打牆距離：左外野：325英呎 中外野：400英呎 右外野：325英呎')
+ st.write('營運管理：富邦金控')
+ st.write('管理與維護：富邦運動場館股份有限公司')
+ st.write('營運與使用：富邦育樂股份有限公司')
  image = Image.open('新莊全景.jpg')
  st.image(image)
 
