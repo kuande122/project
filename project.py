@@ -7,8 +7,8 @@ col1.write('新北新莊棒球場')
 col2.m = folium.Map(location=[25.04054,121.44768], zoom_start=16)
 
  # add marker for Liberty Bell
-tooltip = "新北新莊棒球場"
-folium.Marker([25.04054,121.44768], popup="新北新莊棒球場", tooltip=tooltip
+col2.tooltip = "新北新莊棒球場"
+col2.folium.Marker([25.04054,121.44768], popup="新北新莊棒球場", tooltip=tooltip
     ).add_to(m)
 
  # call to render Folium map in Streamlit
